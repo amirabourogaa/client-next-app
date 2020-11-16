@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
+
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import Footer from "components/Footers/Footer.js";
 
@@ -13,21 +14,36 @@ export default function Index() {
           <div className="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
             <div className="pt-32 sm:pt-0">
               <h2 className="font-semibold text-4xl text-gray-700">
-                IRADA WEB APPLICATION
+                IRADA 
               </h2>
               <p className="mt-4 text-lg leading-relaxed text-gray-600">
-                hello guyssss !
+              IRADA  Consulting est une société de conseil fondée par un groupe d’experts multidisciplinaires hautement qualifié, ayant de longues années d'expériences dans le domaine d’ingénierie et de conseil.
+
+              IRADA Consulting propose une panoplie de services dans les domaines de l’Environnement, de Sécurité industrielle, de Energie et de l’Infrastructure et agit en indépendance totale par rapport aux intérêts des sociétés constructeurs 
+              et des fournisseurs et fournit des solutions sur mesure en fonction des besoins individuels de ces clients.
+
+
               </p>
               
-               
+             
             </div>
           </div>
         </div>
         <img
-          className="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860-px"
-          src={require("assets/img/natt.png")}
+          id='rcorners1'
+          className="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-900-px"
+          src={require("assets/img/naturee2.jpg")}
           alt="..."
         />
+         <style jsx>{`
+
+        #rcorners1 {
+
+          border-radius: 50px;
+         padding : 10px;
+        }
+        
+      `}</style>
       </section>
 
       <section className="mt-48 md:mt-40 pb-40 relative bg-gray-200">
@@ -56,7 +72,7 @@ export default function Index() {
               <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-gray-800">
                 <img
                   alt="..."
-                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80"
+                  src="https://ceitoulouse.fr/wp-content/uploads/2012/12/istock_buildingteam.jpg"
                   className="w-full align-middle rounded-t-lg"
                 />
                 <blockquote className="relative p-8 mb-4">
@@ -191,119 +207,14 @@ export default function Index() {
                   src={require("assets/img/component-profile-card.png")}
                   className="w-full align-middle rounded-lg absolute shadow-lg max-w-210-px left-260-px -top-160-px"
                 />
-                <img
-                  alt="..."
-                  src={require("assets/img/component-info-card.png")}
-                  className="w-full align-middle rounded-lg absolute shadow-lg max-w-180-px left-40-px -top-225-px z-2"
-                />
-                <img
-                  alt="..."
-                  src={require("assets/img/component-info-2.png")}
-                  className="w-full align-middle rounded-lg absolute shadow-2xl max-w-200-px -left-50-px top-25-px"
-                />
+               
                
                
               </div>
             </div>
           </div>
 
-          <div className="flex flex-wrap items-center pt-32">
-            <div className="w-full md:w-6/12 px-4 mr-auto ml-auto mt-32">
-              <div className="justify-center flex flex-wrap relative">
-                <div className="my-4 w-full lg:w-6/12 px-4">
-                  <a
-                    href="https://www.creative-tim.com/learning-lab/tailwind/svelte/alerts/notus?ref=vtw-index"
-                    target="_blank"
-                  >
-                    <div className="bg-red-600 shadow-lg rounded-lg text-center p-8">
-                      <img
-                        alt="..."
-                        className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
-                        src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/svelte.jpg"
-                      />
-                      <p className="text-lg text-white mt-4 font-semibold">
-                        Svelte
-                      </p>
-                    </div>
-                  </a>
-                  <a
-                    href="https://www.creative-tim.com/learning-lab/tailwind/react/alerts/notus?ref=vtw-index"
-                    target="_blank"
-                  >
-                    <div className="bg-blue-500 shadow-lg rounded-lg text-center p-8 mt-8">
-                      <img
-                        alt="..."
-                        className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
-                        src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/react.jpg"
-                      />
-                      <p className="text-lg text-white mt-4 font-semibold">
-                        ReactJS
-                      </p>
-                    </div>
-                  </a>
-                 
-                </div>
-                <div className="my-4 w-full lg:w-6/12 px-4 lg:mt-16">
-                  <a
-                    href="https://www.creative-tim.com/learning-lab/tailwind/js/alerts/notus?ref=vtw-index"
-                    target="_blank"
-                  >
-                    <div className="bg-yellow-500 shadow-lg rounded-lg text-center p-8">
-                      <img
-                        alt="..."
-                        className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
-                        src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/js.png"
-                      />
-                      <p className="text-lg text-white mt-4 font-semibold">
-                        JavaScript
-                      </p>
-                    </div>
-                  </a>
-                 
-                   
-                     
-                  <a
-                    href="https://www.creative-tim.com/learning-lab/tailwind/vue/alerts/notus?ref=vtw-index"
-                    target="_blank"
-                  >
-                    <div className="bg-green-500 shadow-lg rounded-lg text-center p-8 mt-8">
-                      <img
-                        alt="..."
-                        className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
-                        src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/vue.jpg"
-                      />
-                      <p className="text-lg text-white mt-4 font-semibold">
-                        Vue.js
-                      </p>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div className="w-full md:w-4/12 px-12 md:px-4 ml-auto mr-auto mt-48">
-              <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
-                <i className="fas fa-drafting-compass text-xl"></i>
-              </div>
-              <h3 className="text-3xl mb-2 font-semibold leading-normal">
-                Title
-              </h3>
-              <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
-               Description*
-              </p>
-              <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
-               Ideas
-              </p>
-              <div className="block pb-6">
-                
-               
-                <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-gray-600 bg-white uppercase last:mr-0 mr-2 mt-2">
-                  Tooltips
-                </span>
-              </div>
-             
-            </div>
-          </div>
+         
         </div>
 
         <div className="container mx-auto px-4 pb-32 pt-48">
@@ -380,16 +291,6 @@ export default function Index() {
           </div>
         </div>
 
-        <div className="justify-center text-center flex flex-wrap mt-24">
-          <div className="w-full md:w-6/12 px-12 md:px-4">
-            <h2 className="font-semibold text-4xl">Beautiful Example Pages</h2>
-            <p className="text-lg leading-relaxed mt-4 mb-4 text-gray-600">
-              Notus NextJS is a completly new product built using our past
-              experience in web templates. Take the examples we made for you and
-              start playing with them.
-            </p>
-          </div>
-        </div>
       </section>
 
       <section className="block relative z-1 bg-gray-700">
@@ -429,7 +330,7 @@ export default function Index() {
 
                 <div className="w-full lg:w-4/12 px-4">
                   <h5 className="text-xl font-semibold pb-4 text-center">
-                    Landing Page
+                    Contact us 
                   </h5>
                   <Link href="/landing">
                     <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">

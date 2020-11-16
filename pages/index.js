@@ -1,40 +1,73 @@
 import React from "react";
 import Link from "next/link";
-
+import "bootswatch/dist/slate/bootstrap.min.css";
+import "bootswatch/dist/Cerulean/bootstrap.min.css";
+import { UncontrolledCarousel, Row, Col } from "reactstrap";
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import Footer from "components/Footers/Footer.js";
 
+const items = [
+  {
+    src: require("assets/img/naturee.jpg"),
+    altText: "Slide 1",
+    caption: "",
+    header: "",
+    key: "1",
+  },
+  {
+    src: require("assets/img/naturee.jpg"),
+    altText: "Slide 2",
+    caption: "",
+    header: "",
+    key: "2",
+  },
+  {
+    src: require("assets/img/naturee.jpg"),
+    altText: "Slide 3",
+    caption: "",
+    header: "",
+    key: "3",
+  },
+];
 export default function Index() {
   return (
     <>
       <IndexNavbar fixed />
       <section className="header relative pt-16 items-center flex h-screen max-h-860-px">
-        <div className="container mx-auto items-center flex flex-wrap">
-          <div className="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
-            <div className="pt-32 sm:pt-0">
-              <h2 className="font-semibold text-4xl text-gray-700">
-                IRADA WEB APPLICATION
-              </h2>
-              <p className="mt-4 text-lg leading-relaxed text-gray-600">
-                hello guyssss !
-              </p>
-              
-               
+        <Row>
+          <Col>
+            <div className="container mx-auto items-center flex flex-wrap">
+              <div className="w-full md:w-9/12 lg:w-6/12 xl:w-8/12 px-6">
+                <div>
+                  <h2 className="font-semibold text-4xl text-gray-700">
+                    IRADA
+                  </h2>
+                  <p className="mt- text-lg leading-relaxed text-gray-600">
+                    IRADA Consulting is a private engineering and consulting
+                    firm founded by a high qualified and experienced team. We
+                    are a Project and Business Development Company. IRADA
+                    Consulting has a portfolio of services that encompasses
+                    expertise, surveying, advising, training and mentoring in
+                    the sectors of industry, agriculture and environment. We
+                    pride ourselves on providing concrete and customized
+                    solutions fully adapted to the specific needs of our
+                    clients.
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <img
-          className="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860-px"
-          src={require("assets/img/natt.png")}
-          alt="..."
-        />
+          </Col>
+
+          <Col md="6">
+            <UncontrolledCarousel items={items} />
+          </Col>
+        </Row>
       </section>
 
       <section className="mt-48 md:mt-40 pb-40 relative bg-gray-200">
         <div
           className="-mt-20 top-0 bottom-auto left-0 right-0 w-full absolute h-20"
-          style={{ transform: "translateZ(0)" }}
-        >
+          style={{ transform: "translateZ(0)" }}>
           <svg
             className="absolute bottom-0 overflow-hidden"
             xmlns="http://www.w3.org/2000/svg"
@@ -42,12 +75,10 @@ export default function Index() {
             version="1.1"
             viewBox="0 0 2560 100"
             x="0"
-            y="0"
-          >
+            y="0">
             <polygon
               className="text-gray-200 fill-current"
-              points="2560 0 2560 100 0 100"
-            ></polygon>
+              points="2560 0 2560 100 0 100"></polygon>
           </svg>
         </div>
         <div className="container mx-auto">
@@ -56,57 +87,61 @@ export default function Index() {
               <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-gray-800">
                 <img
                   alt="..."
-                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80"
-                  className="w-full align-middle rounded-t-lg"
+                  src="https://scontent.ftun4-1.fna.fbcdn.net/v/t1.15752-9/125425049_999510163894752_8108865946730156680_n.png?_nc_cat=100&ccb=2&_nc_sid=ae9488&_nc_ohc=KNV6gIGjK8gAX9X6_Iq&_nc_ht=scontent.ftun4-1.fna&oh=dc3494a39c8881bdb967fbf6929944a0&oe=5FDA2EFB"
+                  className="w-250px align-middle rounded-t-lg"
                 />
                 <blockquote className="relative p-8 mb-4">
                   <svg
                     preserveAspectRatio="none"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 583 95"
-                    className="absolute left-0 w-full block h-95-px -top-94-px"
-                  >
+                    className="absolute left-0 w-full block h-95-px -top-94-px">
                     <polygon
                       points="-30,95 583,95 583,65"
-                      className="text-gray-800 fill-current"
-                    ></polygon>
+                      className="text-gray-800 fill-current"></polygon>
                   </svg>
-                  <h4 className="text-xl font-bold text-white">
-                    We will add something soon
-                  </h4>
-                  <p className="text-md font-light mt-2 text-white">
-                    with a small description
-                  </p>
+                  <h4 className="text-xl font-bold text-black">Services</h4>
                 </blockquote>
               </div>
             </div>
 
             <div className="w-full md:w-6/12 px-4">
               <div className="flex flex-wrap">
-                <div className="w-full md:w-6/12 px-4">
+                <div className="w-full md:w-9/12 px-4">
                   <div className="relative flex flex-col mt-4">
-                    <div className="px-4 py-5 flex-auto">
-                      <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
+                    <div className="px-4 py-5 ">
+                      <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-15 h-15 mb-5 shadow-lg rounded-full bg-white">
                         <i className="fas fa-sitemap"></i>
                       </div>
                       <h6 className="text-xl mb-1 font-semibold">
-                        service one 
+                        Dans le domaine de l’environnement
                       </h6>
-                      <p className="mb-4 text-gray-600">
-                        description
+                      <p className="mb-6 text-gray-600">
+                        Etudes d’Impact Environnementales et Sociales Etudes de
+                        Dépollution et Diagnostic des sites pollués. Programme
+                        de gestion, traitement et valorisation des déchets
+                        solides et liquides. Accompagnement des clients à la
+                        mise en place d’un système de Management
+                        Environnementale selon les référentiels ISO14001 Mesures
+                        et modélisation des émissions atmosphériques et de la
+                        pollution marine par les hydrocarbures et les substances
+                        chimique. Elaboration et animation des enquêtes
+                        publiques et sociales.
                       </p>
                     </div>
                   </div>
                   <div className="relative flex flex-col min-w-0">
-                    <div className="px-4 py-5 flex-auto">
+                    <div className="px-4  flex-auto">
                       <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
                         <i className="fas fa-drafting-compass"></i>
                       </div>
                       <h6 className="text-xl mb-1 font-semibold">
-                        service two
+                        Dans le domaine de sécurité Industrielle
                       </h6>
                       <p className="mb-4 text-gray-600">
-                      description
+                        Etude de Dangers Etude de Sécurité Incendie Plans
+                        d’Urgence Accompagnement des clients à la mise en place
+                        des programmes de sécurité
                       </p>
                     </div>
                   </div>
@@ -117,9 +152,17 @@ export default function Index() {
                       <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
                         <i className="fas fa-newspaper"></i>
                       </div>
-                      <h6 className="text-xl mb-1 font-semibold">something</h6>
-                      <p className="mb-4 text-gray-600">
-                        description
+                      <h6 className="text-xl mb-1 font-semibold">
+                        Dans le domaine de l’infrastructure
+                      </h6>
+                      <p className="mb-2 text-gray-600">
+                        APS, APD et préparation des appels d’offres pour les
+                        ouvrages hydrauliques et les travaux d’aménagement CES
+                        Conception et assistance à mise en place des stations de
+                        traitements des eaux industrielles et domestiques
+                        Programme d’aménagement des zones industrielles et
+                        urbaines Audit de l’eau et élaboration des programmes
+                        d’économie d’eau
                       </p>
                     </div>
                   </div>
@@ -128,11 +171,13 @@ export default function Index() {
                       <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
                         <i className="fas fa-file-alt"></i>
                       </div>
-                      <h6 className="text-xl mb-1 font-semibold">
-                       other
+                      <h6 className="text-l mb-3 font-semibold">
+                        Dans le domaine de la formation et Assistance technique
                       </h6>
                       <p className="mb-4 text-gray-600">
-                        description
+                        Conception des bases de données géographique Formation
+                        en système d’information géographique Formation dans les
+                        domaines suivants: L’Environnement Sécurité Hygiène
                       </p>
                     </div>
                   </div>
@@ -180,128 +225,16 @@ export default function Index() {
                   Typography
                 </span>
               </div>
-              
             </div>
 
             <div className="w-full md:w-5/12 px-4 mr-auto ml-auto mt-32">
               <div className="relative flex flex-col min-w-0 w-full mb-6 mt-48 md:mt-0">
-              
                 <img
                   alt="..."
                   src={require("assets/img/component-profile-card.png")}
                   className="w-full align-middle rounded-lg absolute shadow-lg max-w-210-px left-260-px -top-160-px"
                 />
-                <img
-                  alt="..."
-                  src={require("assets/img/component-info-card.png")}
-                  className="w-full align-middle rounded-lg absolute shadow-lg max-w-180-px left-40-px -top-225-px z-2"
-                />
-                <img
-                  alt="..."
-                  src={require("assets/img/component-info-2.png")}
-                  className="w-full align-middle rounded-lg absolute shadow-2xl max-w-200-px -left-50-px top-25-px"
-                />
-               
-               
               </div>
-            </div>
-          </div>
-
-          <div className="flex flex-wrap items-center pt-32">
-            <div className="w-full md:w-6/12 px-4 mr-auto ml-auto mt-32">
-              <div className="justify-center flex flex-wrap relative">
-                <div className="my-4 w-full lg:w-6/12 px-4">
-                  <a
-                    href="https://www.creative-tim.com/learning-lab/tailwind/svelte/alerts/notus?ref=vtw-index"
-                    target="_blank"
-                  >
-                    <div className="bg-red-600 shadow-lg rounded-lg text-center p-8">
-                      <img
-                        alt="..."
-                        className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
-                        src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/svelte.jpg"
-                      />
-                      <p className="text-lg text-white mt-4 font-semibold">
-                        Svelte
-                      </p>
-                    </div>
-                  </a>
-                  <a
-                    href="https://www.creative-tim.com/learning-lab/tailwind/react/alerts/notus?ref=vtw-index"
-                    target="_blank"
-                  >
-                    <div className="bg-blue-500 shadow-lg rounded-lg text-center p-8 mt-8">
-                      <img
-                        alt="..."
-                        className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
-                        src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/react.jpg"
-                      />
-                      <p className="text-lg text-white mt-4 font-semibold">
-                        ReactJS
-                      </p>
-                    </div>
-                  </a>
-                 
-                </div>
-                <div className="my-4 w-full lg:w-6/12 px-4 lg:mt-16">
-                  <a
-                    href="https://www.creative-tim.com/learning-lab/tailwind/js/alerts/notus?ref=vtw-index"
-                    target="_blank"
-                  >
-                    <div className="bg-yellow-500 shadow-lg rounded-lg text-center p-8">
-                      <img
-                        alt="..."
-                        className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
-                        src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/js.png"
-                      />
-                      <p className="text-lg text-white mt-4 font-semibold">
-                        JavaScript
-                      </p>
-                    </div>
-                  </a>
-                 
-                   
-                     
-                  <a
-                    href="https://www.creative-tim.com/learning-lab/tailwind/vue/alerts/notus?ref=vtw-index"
-                    target="_blank"
-                  >
-                    <div className="bg-green-500 shadow-lg rounded-lg text-center p-8 mt-8">
-                      <img
-                        alt="..."
-                        className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
-                        src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/vue.jpg"
-                      />
-                      <p className="text-lg text-white mt-4 font-semibold">
-                        Vue.js
-                      </p>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div className="w-full md:w-4/12 px-12 md:px-4 ml-auto mr-auto mt-48">
-              <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
-                <i className="fas fa-drafting-compass text-xl"></i>
-              </div>
-              <h3 className="text-3xl mb-2 font-semibold leading-normal">
-                Title
-              </h3>
-              <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
-               Description*
-              </p>
-              <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
-               Ideas
-              </p>
-              <div className="block pb-6">
-                
-               
-                <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-gray-600 bg-white uppercase last:mr-0 mr-2 mt-2">
-                  Tooltips
-                </span>
-              </div>
-             
             </div>
           </div>
         </div>
@@ -313,11 +246,9 @@ export default function Index() {
                 <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
                   <i className="fas fa-file-alt text-xl"></i>
                 </div>
-                <h3 className="text-3xl font-semibold">
-                  other title
-                </h3>
+                <h3 className="text-3xl font-semibold">other title</h3>
                 <p className="mt-4 text-lg leading-relaxed text-gray-600">
-                 Description
+                  Description
                 </p>
                 <ul className="list-none mt-6">
                   <li className="py-2">
@@ -328,9 +259,7 @@ export default function Index() {
                         </span>
                       </div>
                       <div>
-                        <h4 className="text-gray-600">
-                          Sub title
-                        </h4>
+                        <h4 className="text-gray-600">Sub title</h4>
                       </div>
                     </div>
                   </li>
@@ -342,9 +271,7 @@ export default function Index() {
                         </span>
                       </div>
                       <div>
-                        <h4 className="text-gray-600">
-                          Sub title
-                        </h4>
+                        <h4 className="text-gray-600">Sub title</h4>
                       </div>
                     </div>
                   </li>
@@ -356,9 +283,7 @@ export default function Index() {
                         </span>
                       </div>
                       <div>
-                        <h4 className="text-gray-600">
-                          Sub title
-                        </h4>
+                        <h4 className="text-gray-600">Sub title</h4>
                       </div>
                     </div>
                   </li>
@@ -379,23 +304,12 @@ export default function Index() {
             </div>
           </div>
         </div>
-
-        <div className="justify-center text-center flex flex-wrap mt-24">
-          <div className="w-full md:w-6/12 px-12 md:px-4">
-            <h2 className="font-semibold text-4xl">Beautiful Example Pages</h2>
-            <p className="text-lg leading-relaxed mt-4 mb-4 text-gray-600">
-              Notus NextJS is a completly new product built using our past
-              experience in web templates. Take the examples we made for you and
-              start playing with them.
-            </p>
-          </div>
-        </div>
       </section>
 
       <section className="block relative z-1 bg-gray-700">
-        <div className="container mx-auto">
-          <div className="justify-center flex flex-wrap">
-            <div className="w-full lg:w-12/12 px-4  -mt-24">
+        <div className="container px-4 mx-auto">
+          <div className="flex flex-wrap ">
+            <div className="w-full px-4  -mt-24 w-full px-4 flex-1">
               <div className="flex flex-wrap">
                 <div className="w-full lg:w-4/12 px-4">
                   <h5 className="text-xl font-semibold pb-4 text-center">
@@ -412,7 +326,7 @@ export default function Index() {
                   </Link>
                 </div>
 
-                <div className="w-full lg:w-4/12 px-4">
+                {/* <div className="w-full lg:w-4/12 px-4">
                   <h5 className="text-xl font-semibold pb-4 text-center">
                     Profile Page
                   </h5>
@@ -425,11 +339,11 @@ export default function Index() {
                       />
                     </div>
                   </Link>
-                </div>
+                </div>  */}
 
                 <div className="w-full lg:w-4/12 px-4">
                   <h5 className="text-xl font-semibold pb-4 text-center">
-                    Landing Page
+                    Contact us
                   </h5>
                   <Link href="/landing">
                     <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
@@ -447,98 +361,24 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="py-20 bg-gray-700 overflow-hidden">
-        <div className="container mx-auto pb-64">
-          <div className="flex flex-wrap justify-center">
-            <div className="w-full md:w-5/12 px-12 md:px-4 ml-auto mr-auto md:mt-64">
-              <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
-                <i className="fas fa-code-branch text-xl"></i>
-              </div>
-              <h3 className="text-3xl mb-2 font-semibold leading-normal text-white">
-                Title
-              </h3>
-              <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-500">
-                Since{" "}
-                <a
-                  href=""
-                  className="text-gray-400"
-                  target="_blank"
-                >
-                  Sub title
-                </a>{" "}
-               Description
-              </p>
-             
-             
-            </div>
+      {/* <section className="py-20 bg-gray-700 overflow-hidden">
+         <div className="w-full lg:w-4/12 px-4">
+                  <h5 className="text-xl font-semibold pb-4 text-center">
+                    Contact us 
+                  </h5>
+                  <Link href="/landing">
+                    <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
+                      <img
+                        alt="..."
+                        className="align-middle border-none max-w-full h-auto rounded-lg"
+                        src={require("assets/img/landing.jpg")}
+                      />
+                    </div>
+                  </Link>
+                </div>
+      </section> */}
 
-            <div className="w-full md:w-4/12 px-4 mr-auto ml-auto mt-32 relative">
-            
-              <i className="fas fa-atom text-gray-800 absolute text-55 -top-150-px -right-100 left-auto opacity-80"></i>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="pb-16 bg-gray-300 relative pt-32">
-        <div
-          className="-mt-20 top-0 bottom-auto left-0 right-0 w-full absolute h-20"
-          style={{ transform: "translateZ(0)" }}
-        >
-          <svg
-            className="absolute bottom-0 overflow-hidden"
-            xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="none"
-            version="1.1"
-            viewBox="0 0 2560 100"
-            x="0"
-            y="0"
-          >
-            <polygon
-              className="text-gray-300 fill-current"
-              points="2560 0 2560 100 0 100"
-            ></polygon>
-          </svg>
-        </div>
-
-        <div className="container mx-auto">
-          <div className="flex flex-wrap justify-center bg-white shadow-xl rounded-lg -mt-64 py-16 px-12 relative z-10">
-            <div className="w-full text-center lg:w-8/12">
-              <p className="text-4xl text-center">
-                <span role="img" aria-label="love">
-                  😍
-                </span>
-              </p>
-              <h3 className="font-semibold text-3xl">
-                Do you love this Starter Kit?
-              </h3>
-              <p className="text-gray-600 text-lg leading-relaxed mt-4 mb-4">
-                Cause if you do, it can be yours now. Hit the buttons below to
-                navigate to get the Free version for your next project. Build a
-                new web app or give an old project a new look!
-              </p>
-              <div className="sm:block flex flex-col mt-10">
-                <a
-                  href="https://www.creative-tim.com/learning-lab/tailwind/nextjs/overview/notus?ref=nnjs-index"
-                  target="_blank"
-                  className="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-2 bg-gray-600 active:bg-gray-700 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
-                >
-                  Get started
-                </a>
-                <a
-                  href="https://github.com/creativetimofficial/notus-nextjs?ref=nnjs-index"
-                  target="_blank"
-                  className="github-star sm:ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-gray-800 active:bg-gray-700 uppercase text-sm shadow hover:shadow-lg"
-                >
-                  <i className="fab fa-github text-lg mr-1"></i>
-                  <span>Help With a Star</span>
-                </a>
-              </div>
-              <div className="text-center mt-16"></div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <section className="pb-16 bg-gray-300 relative pt-32"></section>
       <Footer />
     </>
   );

@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import 'bootswatch/dist/slate/bootstrap.min.css';
+import "bootswatch/dist/slate/bootstrap.min.css";
 import "bootswatch/dist/Cerulean/bootstrap.min.css";
 import { UncontrolledCarousel, Row, Col } from "reactstrap";
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
@@ -34,55 +34,49 @@ export default function Index() {
     <>
       <IndexNavbar fixed />
       <section className="header relative pt-16 items-center flex h-screen max-h-860-px">
-      <Row>
-    <Col md="8" className="mx-auto">
-      <UncontrolledCarousel items={items} />
-    </Col>
-  </Row>
-        <div className="container mx-auto items-center flex flex-wrap">
-          <div className="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
-            <div className="pt-32 sm:pt-0">
-              <h2 className="font-semibold text-4xl text-gray-700">
-                IRADA 
-              </h2>
-              <p className="mt-4 text-lg leading-relaxed text-gray-600">
-              IRADA  Consulting est une société de conseil fondée par un groupe d’experts multidisciplinaires hautement qualifié, ayant de longues années d'expériences dans le domaine d’ingénierie et de conseil.
+        <Row>
+          <Col>
+            <div className="container mx-auto items-center flex flex-wrap">
+              <div className="w-full md:w-9/12 lg:w-6/12 xl:w-8/12 px-6">
+                <div >
+                  <h2 className="font-semibold text-4xl text-gray-700">
+                    IRADA
+                  </h2>
+                  <p className="mt- text-lg leading-relaxed text-gray-600">
+                    IRADA Consulting est une société de conseil fondée par un
+                    groupe d’experts multidisciplinaires hautement qualifié,
+                    ayant de longues années d'expériences dans le domaine
+                    d’ingénierie et de conseil. IRADA Consulting propose une
+                    panoplie de services dans les domaines de l’Environnement,
+                    de Sécurité industrielle, de Energie et de l’Infrastructure
+                    et agit en indépendance totale par rapport aux intérêts des
+                    sociétés constructeurs et des fournisseurs et fournit des
+                    solutions sur mesure en fonction des besoins individuels de
+                    ces clients.
+                  </p>
 
-              IRADA Consulting propose une panoplie de services dans les domaines de l’Environnement, de Sécurité industrielle, de Energie et de l’Infrastructure et agit en indépendance totale par rapport aux intérêts des sociétés constructeurs 
-              et des fournisseurs et fournit des solutions sur mesure en fonction des besoins individuels de ces clients.
-
-
-              </p>
-
-              <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
-             
+                 
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-         
-        {/* <img
+          </Col>
+          {/* <img
           id='rcorners1'
           className="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-900-px"
           src={require("assets/img/naturee2.jpg")}
           alt="..."
         /> */}
-      <style jsx>{`
-
-       #rcorners1 {
-
-      border-radius: 50px;
-       padding : 10px;
-      }
         
-     `}</style>
-
+          <Col md="6">
+            <UncontrolledCarousel items={items} />
+          </Col>
+        </Row>
       </section>
-
+     
       <section className="mt-48 md:mt-40 pb-40 relative bg-gray-200">
         <div
           className="-mt-20 top-0 bottom-auto left-0 right-0 w-full absolute h-20"
-          style={{ transform: "translateZ(0)" }}
-        >
+          style={{ transform: "translateZ(0)" }}>
           <svg
             className="absolute bottom-0 overflow-hidden"
             xmlns="http://www.w3.org/2000/svg"
@@ -90,12 +84,10 @@ export default function Index() {
             version="1.1"
             viewBox="0 0 2560 100"
             x="0"
-            y="0"
-          >
+            y="0">
             <polygon
               className="text-gray-200 fill-current"
-              points="2560 0 2560 100 0 100"
-            ></polygon>
+              points="2560 0 2560 100 0 100"></polygon>
           </svg>
         </div>
         <div className="container mx-auto">
@@ -112,12 +104,10 @@ export default function Index() {
                     preserveAspectRatio="none"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 583 95"
-                    className="absolute left-0 w-full block h-95-px -top-94-px"
-                  >
+                    className="absolute left-0 w-full block h-95-px -top-94-px">
                     <polygon
                       points="-30,95 583,95 583,65"
-                      className="text-gray-800 fill-current"
-                    ></polygon>
+                      className="text-gray-800 fill-current"></polygon>
                   </svg>
                   <h4 className="text-xl font-bold text-white">
                     We will add something soon
@@ -138,11 +128,9 @@ export default function Index() {
                         <i className="fas fa-sitemap"></i>
                       </div>
                       <h6 className="text-xl mb-1 font-semibold">
-                        service one 
+                        service one
                       </h6>
-                      <p className="mb-4 text-gray-600">
-                        description
-                      </p>
+                      <p className="mb-4 text-gray-600">description</p>
                     </div>
                   </div>
                   <div className="relative flex flex-col min-w-0">
@@ -153,9 +141,7 @@ export default function Index() {
                       <h6 className="text-xl mb-1 font-semibold">
                         service two
                       </h6>
-                      <p className="mb-4 text-gray-600">
-                      description
-                      </p>
+                      <p className="mb-4 text-gray-600">description</p>
                     </div>
                   </div>
                 </div>
@@ -166,9 +152,7 @@ export default function Index() {
                         <i className="fas fa-newspaper"></i>
                       </div>
                       <h6 className="text-xl mb-1 font-semibold">something</h6>
-                      <p className="mb-4 text-gray-600">
-                        description
-                      </p>
+                      <p className="mb-4 text-gray-600">description</p>
                     </div>
                   </div>
                   <div className="relative flex flex-col min-w-0">
@@ -176,12 +160,8 @@ export default function Index() {
                       <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
                         <i className="fas fa-file-alt"></i>
                       </div>
-                      <h6 className="text-xl mb-1 font-semibold">
-                       other
-                      </h6>
-                      <p className="mb-4 text-gray-600">
-                        description
-                      </p>
+                      <h6 className="text-xl mb-1 font-semibold">other</h6>
+                      <p className="mb-4 text-gray-600">description</p>
                     </div>
                   </div>
                 </div>
@@ -228,25 +208,18 @@ export default function Index() {
                   Typography
                 </span>
               </div>
-              
             </div>
 
             <div className="w-full md:w-5/12 px-4 mr-auto ml-auto mt-32">
               <div className="relative flex flex-col min-w-0 w-full mb-6 mt-48 md:mt-0">
-              
                 <img
                   alt="..."
                   src={require("assets/img/component-profile-card.png")}
                   className="w-full align-middle rounded-lg absolute shadow-lg max-w-210-px left-260-px -top-160-px"
                 />
-               
-               
-               
               </div>
             </div>
           </div>
-
-         
         </div>
 
         <div className="container mx-auto px-4 pb-32 pt-48">
@@ -256,11 +229,9 @@ export default function Index() {
                 <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
                   <i className="fas fa-file-alt text-xl"></i>
                 </div>
-                <h3 className="text-3xl font-semibold">
-                  other title
-                </h3>
+                <h3 className="text-3xl font-semibold">other title</h3>
                 <p className="mt-4 text-lg leading-relaxed text-gray-600">
-                 Description
+                  Description
                 </p>
                 <ul className="list-none mt-6">
                   <li className="py-2">
@@ -271,9 +242,7 @@ export default function Index() {
                         </span>
                       </div>
                       <div>
-                        <h4 className="text-gray-600">
-                          Sub title
-                        </h4>
+                        <h4 className="text-gray-600">Sub title</h4>
                       </div>
                     </div>
                   </li>
@@ -285,9 +254,7 @@ export default function Index() {
                         </span>
                       </div>
                       <div>
-                        <h4 className="text-gray-600">
-                          Sub title
-                        </h4>
+                        <h4 className="text-gray-600">Sub title</h4>
                       </div>
                     </div>
                   </li>
@@ -299,9 +266,7 @@ export default function Index() {
                         </span>
                       </div>
                       <div>
-                        <h4 className="text-gray-600">
-                          Sub title
-                        </h4>
+                        <h4 className="text-gray-600">Sub title</h4>
                       </div>
                     </div>
                   </li>
@@ -310,7 +275,6 @@ export default function Index() {
             </div>
 
             <div className="w-full md:w-6/12 mr-auto px-4 pt-24 md:pt-0">
-          
               <img
                 alt="..."
                 className="max-w-full rounded-lg shadow-xl"
@@ -323,7 +287,6 @@ export default function Index() {
             </div>
           </div>
         </div>
-
       </section>
 
       <section className="block relative z-1 bg-gray-700">
@@ -363,7 +326,7 @@ export default function Index() {
 
                 <div className="w-full lg:w-4/12 px-4">
                   <h5 className="text-xl font-semibold pb-4 text-center">
-                    Contact us 
+                    Contact us
                   </h5>
                   <Link href="/landing">
                     <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
@@ -398,9 +361,7 @@ export default function Index() {
                 </div>
       </section> */}
 
-      <section className="pb-16 bg-gray-300 relative pt-32">
-        
-      </section>
+      <section className="pb-16 bg-gray-300 relative pt-32"></section>
       <Footer />
     </>
   );

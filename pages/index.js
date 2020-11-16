@@ -38,41 +38,32 @@ export default function Index() {
           <Col>
             <div className="container mx-auto items-center flex flex-wrap">
               <div className="w-full md:w-9/12 lg:w-6/12 xl:w-8/12 px-6">
-                <div >
+                <div>
                   <h2 className="font-semibold text-4xl text-gray-700">
                     IRADA
                   </h2>
                   <p className="mt- text-lg leading-relaxed text-gray-600">
-                    IRADA Consulting est une société de conseil fondée par un
-                    groupe d’experts multidisciplinaires hautement qualifié,
-                    ayant de longues années d'expériences dans le domaine
-                    d’ingénierie et de conseil. IRADA Consulting propose une
-                    panoplie de services dans les domaines de l’Environnement,
-                    de Sécurité industrielle, de Energie et de l’Infrastructure
-                    et agit en indépendance totale par rapport aux intérêts des
-                    sociétés constructeurs et des fournisseurs et fournit des
-                    solutions sur mesure en fonction des besoins individuels de
-                    ces clients.
+                    IRADA Consulting is a private engineering and consulting
+                    firm founded by a high qualified and experienced team. We
+                    are a Project and Business Development Company. IRADA
+                    Consulting has a portfolio of services that encompasses
+                    expertise, surveying, advising, training and mentoring in
+                    the sectors of industry, agriculture and environment. We
+                    pride ourselves on providing concrete and customized
+                    solutions fully adapted to the specific needs of our
+                    clients.
                   </p>
-
-                 
                 </div>
               </div>
             </div>
           </Col>
-          {/* <img
-          id='rcorners1'
-          className="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-900-px"
-          src={require("assets/img/naturee2.jpg")}
-          alt="..."
-        /> */}
-        
+
           <Col md="6">
             <UncontrolledCarousel items={items} />
           </Col>
         </Row>
       </section>
-     
+
       <section className="mt-48 md:mt-40 pb-40 relative bg-gray-200">
         <div
           className="-mt-20 top-0 bottom-auto left-0 right-0 w-full absolute h-20"
@@ -96,8 +87,8 @@ export default function Index() {
               <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-gray-800">
                 <img
                   alt="..."
-                  src="https://ceitoulouse.fr/wp-content/uploads/2012/12/istock_buildingteam.jpg"
-                  className="w-full align-middle rounded-t-lg"
+                  src="https://scontent.ftun4-1.fna.fbcdn.net/v/t1.15752-9/125425049_999510163894752_8108865946730156680_n.png?_nc_cat=100&ccb=2&_nc_sid=ae9488&_nc_ohc=KNV6gIGjK8gAX9X6_Iq&_nc_ht=scontent.ftun4-1.fna&oh=dc3494a39c8881bdb967fbf6929944a0&oe=5FDA2EFB"
+                  className="w-250px align-middle rounded-t-lg"
                 />
                 <blockquote className="relative p-8 mb-4">
                   <svg
@@ -109,39 +100,49 @@ export default function Index() {
                       points="-30,95 583,95 583,65"
                       className="text-gray-800 fill-current"></polygon>
                   </svg>
-                  <h4 className="text-xl font-bold text-white">
-                    We will add something soon
-                  </h4>
-                  <p className="text-md font-light mt-2 text-white">
-                    with a small description
-                  </p>
+                  <h4 className="text-xl font-bold text-black">Services</h4>
                 </blockquote>
               </div>
             </div>
 
             <div className="w-full md:w-6/12 px-4">
               <div className="flex flex-wrap">
-                <div className="w-full md:w-6/12 px-4">
+                <div className="w-full md:w-9/12 px-4">
                   <div className="relative flex flex-col mt-4">
-                    <div className="px-4 py-5 flex-auto">
-                      <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
+                    <div className="px-4 py-5 ">
+                      <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-15 h-15 mb-5 shadow-lg rounded-full bg-white">
                         <i className="fas fa-sitemap"></i>
                       </div>
                       <h6 className="text-xl mb-1 font-semibold">
-                        service one
+                        Dans le domaine de l’environnement
                       </h6>
-                      <p className="mb-4 text-gray-600">description</p>
+                      <p className="mb-6 text-gray-600">
+                        Etudes d’Impact Environnementales et Sociales Etudes de
+                        Dépollution et Diagnostic des sites pollués. Programme
+                        de gestion, traitement et valorisation des déchets
+                        solides et liquides. Accompagnement des clients à la
+                        mise en place d’un système de Management
+                        Environnementale selon les référentiels ISO14001 Mesures
+                        et modélisation des émissions atmosphériques et de la
+                        pollution marine par les hydrocarbures et les substances
+                        chimique. Elaboration et animation des enquêtes
+                        publiques et sociales.
+                      </p>
                     </div>
                   </div>
                   <div className="relative flex flex-col min-w-0">
-                    <div className="px-4 py-5 flex-auto">
+                    <div className="px-4  flex-auto">
                       <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
                         <i className="fas fa-drafting-compass"></i>
                       </div>
                       <h6 className="text-xl mb-1 font-semibold">
-                        service two
+                        Dans le domaine de sécurité Industrielle
                       </h6>
-                      <p className="mb-4 text-gray-600">description</p>
+                      <p className="mb-4 text-gray-600">
+                        Etude de Dangers Etude de Sécurité Incendie Plans
+                        d’Urgence Accompagnement des clients à la mise en place
+                        des programmes de sécurité
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -151,8 +152,18 @@ export default function Index() {
                       <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
                         <i className="fas fa-newspaper"></i>
                       </div>
-                      <h6 className="text-xl mb-1 font-semibold">something</h6>
-                      <p className="mb-4 text-gray-600">description</p>
+                      <h6 className="text-xl mb-1 font-semibold">
+                        Dans le domaine de l’infrastructure
+                      </h6>
+                      <p className="mb-2 text-gray-600">
+                        APS, APD et préparation des appels d’offres pour les
+                        ouvrages hydrauliques et les travaux d’aménagement CES
+                        Conception et assistance à mise en place des stations de
+                        traitements des eaux industrielles et domestiques
+                        Programme d’aménagement des zones industrielles et
+                        urbaines Audit de l’eau et élaboration des programmes
+                        d’économie d’eau
+                      </p>
                     </div>
                   </div>
                   <div className="relative flex flex-col min-w-0">
@@ -160,8 +171,14 @@ export default function Index() {
                       <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
                         <i className="fas fa-file-alt"></i>
                       </div>
-                      <h6 className="text-xl mb-1 font-semibold">other</h6>
-                      <p className="mb-4 text-gray-600">description</p>
+                      <h6 className="text-l mb-3 font-semibold">
+                        Dans le domaine de la formation et Assistance technique
+                      </h6>
+                      <p className="mb-4 text-gray-600">
+                        Conception des bases de données géographique Formation
+                        en système d’information géographique Formation dans les
+                        domaines suivants: L’Environnement Sécurité Hygiène
+                      </p>
                     </div>
                   </div>
                 </div>

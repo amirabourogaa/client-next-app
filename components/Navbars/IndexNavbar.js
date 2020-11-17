@@ -7,6 +7,7 @@ import "bootswatch/dist/slate/bootstrap.min.css";
 import "bootswatch/dist/Cerulean/bootstrap.min.css";
 import IndexDropdown from "components/Dropdowns/IndexDropdown.js";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import Link from "next/link";
 
 export default function Navbar(props) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
@@ -37,15 +38,15 @@ export default function Navbar(props) {
   <div className="collapse navbar-collapse" id="navbarColor02">
     <ul className="navbar-nav mr-auto">
       <li className="nav-item active">
-        <a className="nav-link" href="#">Home
-          <span className="sr-only">(current)</span>
+        <a className="nav-link" href="/">Home
+          
         </a>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="#">Contact us</a>
+        <a className="nav-link" href="/landing">Contact us</a>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="#">Partners</a>
+        <a className="nav-link" href="/modal">Services</a>
       </li>
       <li className="nav-item">
         <a className="nav-link" href="#">About</a>

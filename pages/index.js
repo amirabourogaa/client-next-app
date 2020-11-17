@@ -41,7 +41,7 @@ export default function Index() {
     <>
  
       <IndexNavbar fixed />
-      <Modal style={{"z-index":"2"}}/>
+      {/* <Modal style={{"z-index":"2"}}/> */}
       <section className="header relative pt-16 items-center flex h-screen max-h-860-px">
         <Row>
           <Col>
@@ -110,70 +110,11 @@ export default function Index() {
                       points="-30,95 583,95 583,65"
                       className="text-gray-800 fill-current"></polygon>
                   </svg>
-                  <h4 className="text-xl font-bold text-black">Services</h4>
+                 
                 </blockquote>
               </div>
             </div>
 
-            <div className="w-full md:w-6/12 px-4">
-              <div className="flex flex-wrap">
-                <div className="w-full md:w-9/12 px-4">
-                  <div className="relative flex flex-col mt-4">
-                    <div className="px-4 py-5 ">
-                      <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-15 h-15 mb-5 shadow-lg rounded-full bg-white">
-                        <i className="fas fa-sitemap"></i>
-                      </div>
-                      
-                      
-                     
-                       
-                     
-                    </div>
-                  </div>
-                  <div className="relative flex flex-col min-w-0">
-                    <div className="px-4  flex-auto">
-                      <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
-                        <i className="fas fa-drafting-compass"></i>
-                      </div>
-                      <h6 className="text-xl mb-1 font-semibold">
-                        Dans le domaine de sécurité Industrielle
-                      </h6>
-                      <p className="mb-4 text-gray-600">
-                       
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="w-full md:w-6/12 px-4">
-                  <div className="relative flex flex-col min-w-0 mt-4">
-                    <div className="px-4 py-5 flex-auto">
-                      <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
-                        <i className="fas fa-newspaper"></i>
-                      </div>
-                      <h6 className="text-xl mb-1 font-semibold">
-                        Dans le domaine de l’infrastructure
-                      </h6>
-                      <p className="mb-2 text-gray-600">
-                       
-                      </p>
-                    </div>
-                  </div>
-                  <div className="relative flex flex-col min-w-0">
-                    <div className="px-4 py-5 flex-auto">
-                      <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
-                        <i className="fas fa-file-alt"></i>
-                      </div>
-                      <h6 className="text-l mb-3 font-semibold">
-                        Dans le domaine de la formation et Assistance technique
-                      </h6>
-                      <p className="mb-4 text-gray-600">
-                        
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
 
@@ -318,20 +259,20 @@ export default function Index() {
                
 
 
-                {/* <div className="w-full lg:w-4/12 px-4">
+                <div className="w-full lg:w-4/12 px-4">
                   <h5 className="text-xl font-semibold pb-4 text-center">
-                    Profile Page
+                    Services
                   </h5>
                   <Link href="/profile">
                     <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
                       <img
                         alt="..."
                         className="align-middle border-none max-w-full h-auto rounded-lg"
-                        src={require("assets/img/profile.jpg")}
+                        src={require("assets/img/naturee2.jpg")}
                       />
                     </div>
                   </Link>
-                </div>  */}
+                </div> 
 
                 <div className="w-full lg:w-4/12 px-4">
                   <h5 className="text-xl font-semibold pb-4 text-center">
@@ -373,15 +314,7 @@ export default function Index() {
       <section className="pb-16 bg-gray-300 relative pt-32"></section>
       <Footer />
       <div>
-      <button
-        className="bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-        type="button"
-        onClick={() => {setShowModal(true)
-        }
-        }
-      >
-        Open small modal
-      </button>
+     
     </div>
     </>
 

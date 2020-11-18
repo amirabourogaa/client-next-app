@@ -5,7 +5,6 @@ import { createPopper } from '@popperjs/core';
 // components
 import "bootswatch/dist/slate/bootstrap.min.css";
 import "bootswatch/dist/Cerulean/bootstrap.min.css";
-import IndexDropdown from "components/Dropdowns/IndexDropdown.js";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import Link from "next/link";
 
@@ -26,7 +25,7 @@ export default function Navbar(props) {
   return (
     <>
      
-<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav className="navbar navbar-expand-lg navbar-dark bg-black">
   <a className="navbar-brand" href="#">
     IRADA consulting 
     </a>

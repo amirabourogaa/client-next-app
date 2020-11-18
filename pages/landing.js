@@ -1,17 +1,22 @@
 import React from "react";
 import Link from "next/link";
-
+import axios from "axios";
 // components
 
 import Navbar from "components/Navbars/AuthNavbar.js";
-import Footer from "components/Footers/Footer.js";
 
 export default function Landing() {
   const submit = (e) => {
-    debugger;
-    let name = document.getElementById("FullName").value;
-    let email = document.getElementById("email").innerHTML;
-    console.log(name);
+    e.preventDefault();
+    let obj = {};
+    obj.name = document.getElementById("FullName").value;
+    obj.email = document.getElementById("email").value;
+    obj.reason = document.getElementById("reason").value;
+    obj.message = document.getElementById("message").value;
+    axios.post("http://localhost:5500/client/contact", obj).then((res) => {
+      console.log(res);
+    });
+
     e.preventDefault();
   };
   return (
@@ -360,7 +365,7 @@ export default function Landing() {
               <div className="w-full lg:w-6/12 px-4">
                 <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300">
                   <div className="flex-auto p-5 lg:p-10">
-                    <h4 className="text-2xl font-semibold">Constact</h4>
+                    <h4 className="text-2xl font-semibold">Contact</h4>
                     <p className="leading-relaxed mt-1 mb-4 text-gray-600">
                       Complete this form and we will get back to you in 24
                       hours.
@@ -379,6 +384,7 @@ export default function Landing() {
                           className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full ease-linear transition-all duration-150"
                           placeholder="Full Name"
                           id="FullName"
+                          required={true}
                         />
                       </div>
                       <div className="relative w-full mb-3">
@@ -388,11 +394,13 @@ export default function Landing() {
                         >
                           Email
                         </label>
+
                         <input
                           type="email"
                           className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full ease-linear transition-all duration-150"
                           placeholder="Email"
                           id="email"
+                          required={true}
                         />
                       </div>
                       <div className="relative w-full mb-3">
@@ -402,12 +410,14 @@ export default function Landing() {
                         >
                           reason
                         </label>
-                        <input
-                          type="text"
-                          className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full ease-linear transition-all duration-150"
-                          placeholder="reson for you message"
+                        <select
                           id="reason"
-                        />
+                          className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full ease-linear transition-all duration-150"
+                        >
+                          <option value="job">Job</option>
+                          <option value="reaquest">Reaquest</option>
+                          <option value="others">Other...</option>
+                        </select>
                       </div>
                       <div className="relative w-full mb-3">
                         <label
@@ -422,13 +432,13 @@ export default function Landing() {
                           className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
                           placeholder="Type a message..."
                           id="message"
+                          required={true}
                         />
                       </div>
                       <div className="text-center mt-6">
                         <button
                           className="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                          type="button"
-                          onClick={submit}
+                          type="submit"
                         >
                           Send Message <i className="fas fa-sign-in-alt"></i>
                         </button>

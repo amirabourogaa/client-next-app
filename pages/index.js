@@ -379,7 +379,7 @@ export default function Index() {
           </svg>
         </div>
 
-        <div className="container mx-auto">
+        <div id='partners' className="container mx-auto">
           <div className="flex flex-wrap justify-center bg-white shadow-xl rounded-lg -mt-64 py-16 px-12 relative z-10">
             <div className="w-full text-center lg:w-8/12">
               <p className="text-4xl text-center">
@@ -393,29 +393,29 @@ export default function Index() {
                 <Row>
                   
                 <a
-                  href="https://www.creative-tim.com/learning-lab/tailwind/nextjs/overview/notus?ref=nnjs-index"
+                  href="http://www.mpscompany.net/"
                   target="_blank"
                   >                  
                 <div className="flex flex-wrap justify-center">
                     <div>
                       <img
-                        style={{width:'150px' , marginRight:'200px',marginLeft:'150px'}}
-                        src="assets/img/mps.png"
-                        alt="..."
+                        style={{width:'150px' ,height:'300px', marginRight:'200px',marginLeft:'150px'}}
+                        src="http://www.mpscompany.net/assets/images/logo2.png"
+                        
                         className="shadow-lg rounded-full  h-auto  border-none"
                       />
                     </div>
                   </div>
                 </a>
                 <a
-                  href="https://github.com/creativetimofficial/notus-nextjs?ref=nnjs-index"
+                  href="https://www.geo-arch.net/"
                   target="_blank"
                   >                  
                   <div className="flex flex-wrap justify-center">
                     <div>
                       <img
                         style={{width:'150px'}}
-                        src="https://demos.creative-tim.com/tailwindcss-starter-project/_next/static/images/team-4-470x470-4ef82ef45a9598d24c4c951ead4d626a.png"
+                        src="https://www.geo-arch.net/____impro/1/onewebmedia/geoArch.logo%20petit%202.png?etag=%2225cf-5a1d7ce6%22&sourceContentType=image%2Fpng"
                         alt="..."
                         className="shadow-lg rounded-full  h-auto  border-none"
                       />
@@ -430,7 +430,7 @@ export default function Index() {
         </div>
       </section>
 
-      {/* <section className="pb-16 bg-gray-300 relative pt-32"></section> */}
+     
       <Footer />
       <div></div>
     </>

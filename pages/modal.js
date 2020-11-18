@@ -1,4 +1,6 @@
 import React from "react";
+import IndexNavbar from "components/Navbars/IndexNavbar.js";
+
 
 
 const Tabs = () => {
@@ -6,7 +8,7 @@ const Tabs = () => {
   return (
     <>
     
-     
+    <IndexNavbar fixed />
       <br></br><br></br><br></br><br></br><br></br>
       <div className="card bg-light mb-3" >
   <div className="card-header">Header</div>

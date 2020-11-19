@@ -6,6 +6,8 @@ import { UncontrolledCarousel, Row, Col } from "reactstrap";
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import Footer from "components/Footers/Footer.js";
 import Modal from "./modal.js";
+import Carousel from 'react-bootstrap/Carousel';
+import image01 from '../assets/img/logo/anged.png';
 
 import { left } from "@popperjs/core";
 
@@ -32,9 +34,40 @@ const items = [
     key: "3",
   },
 ];
+const items2 = [
+  {
+    
+    src: require("assets/img/logo/omv.png"),
+    altText: "Slide 1",
+    caption: "",
+    header: "",
+    key: "1",
+  },
+  {
+    src: require("assets/img/logo/anged.png"),
+    altText: "Slide 2",
+    caption: "",
+    header: "",
+    key: "2",
+  },
+  {
+    src: require("assets/img/sunEnergy.jpg"),
+    altText: "Slide 3",
+    caption: "",
+    header: "",
+    key: "3",
+  },
+];
+
 
 export default function Index() {
+  
   const [showModal, setShowModal] = useState(true);
+  const [index, setIndex] = useState(0);
+
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex);
+  };
 
   return (
     <>
@@ -248,15 +281,43 @@ export default function Index() {
             </div>
 
             <div className="w-full md:w-6/12 mr-auto px-4 pt-24 md:pt-0">
-              <img
-                alt="..."
-                className="max-w-full rounded-lg shadow-xl"
-                style={{
-                  transform:
-                    "scale(1) perspective(1040px) rotateY(-11deg) rotateX(2deg) rotate(2deg)",
-                }}
-                src={require("assets/img/clients.png")}
-              />
+              
+               <div className="w-full px-4 flex-1">
+          <span className="text-sm block my-4 p-3 ">
+            {/* <UncontrolledCarousel style={{width: '200px',height:'200px'}}  items={items2} /> */}
+            <Carousel activeIndex={index} onSelect={handleSelect}>
+      <Carousel.Item>
+        <img
+          style = {{width:'300 px', height : '300px'}}
+          className="d-block w-100"
+          src="assets/img/logo/omv.png"
+          alt="First slide"
+        />
+       
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+        style = {{width:'300 px', height : '300px'}}
+          className="d-block w-100"
+          src=""
+          alt="Second slide"
+        />
+
+        
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+         style = {{width:'300 px', height : '300px'}}
+          className="d-block w-100"
+          src="../assets/img/logo/anged.png"
+          alt="Third slide"
+        />
+
+       
+      </Carousel.Item>
+    </Carousel>
+          </span>
+        </div>
             </div>
           </div>
         </div>

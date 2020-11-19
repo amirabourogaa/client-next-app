@@ -34,6 +34,7 @@ const items = [
 ];
 
 export default function Index() {
+  
   const [showModal, setShowModal] = useState(true);
 
   return (

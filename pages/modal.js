@@ -49,10 +49,7 @@ const Tabs = () => {
       <div className="flex flex-wrap">
       
 
-      <div style = {{width:'200px'}}className ='logo'>
-        <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiC49YphTERcpG51_-UdZtV7SYEghYhShijQ&usqp=CAU'></img>
-      </div>
-      
+     
         <div className="w-full px-4 flex-1">
           <span className="text-sm block my-4 p-3 ">
             <UncontrolledCarousel style={{ height: "100px" }} items={items} />

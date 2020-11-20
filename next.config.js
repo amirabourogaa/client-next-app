@@ -16,8 +16,16 @@ module.exports = withFonts(
             use: {
               loader: "url-loader",
             },
+            
           });
           config.resolve.modules.push(path.resolve("./"));
+          config.plugins.push(
+            new webpack.ProvidePlugin({
+              $: 'jquery',
+              jQuery: 'jquery',
+              'window.jQuery': 'jquery'
+          }),
+          )
           return config;
         },
       })

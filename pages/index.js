@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import "bootswatch/dist/slate/bootstrap.min.css";
 import "bootswatch/dist/Cerulean/bootstrap.min.css";
 import { UncontrolledCarousel, Row, Col } from "reactstrap";
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import Footer from "components/Footers/Footer.js";
+import Modal from "./modal.js";
+import Carousel from 'react-bootstrap/Carousel';
+import image01 from '../assets/img/logo/anged.png';
+
+import { left } from "@popperjs/core";
 
 const items = [
   {
@@ -15,25 +20,60 @@ const items = [
     key: "1",
   },
   {
-    src: require("assets/img/naturee.jpg"),
+    src: require("assets/img/naturee2.jpg"),
     altText: "Slide 2",
     caption: "",
     header: "",
     key: "2",
   },
   {
-    src: require("assets/img/naturee.jpg"),
+    src: require("assets/img/sunEnergy.jpg"),
     altText: "Slide 3",
     caption: "",
     header: "",
     key: "3",
   },
 ];
+const items2 = [
+  {
+    
+    src: require("assets/img/logo/omv.png"),
+    altText: "Slide 1",
+    caption: "",
+    header: "",
+    key: "1",
+  },
+  {
+    src: require("assets/img/logo/anged.png"),
+    altText: "Slide 2",
+    caption: "",
+    header: "",
+    key: "2",
+  },
+  {
+    src: require("assets/img/sunEnergy.jpg"),
+    altText: "Slide 3",
+    caption: "",
+    header: "",
+    key: "3",
+  },
+];
+
+
 export default function Index() {
+  
+  const [showModal, setShowModal] = useState(true);
+  const [index, setIndex] = useState(0);
+
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex);
+  };
+
   return (
     <>
       <IndexNavbar fixed />
-      <section className="header relative pt-16 items-center flex h-screen max-h-860-px">
+      {/* <Modal style={{"z-index":"2"}}/> */}
+      <section className="header relative pt-16 items-center flex h-screen bg-white max-h-860-px">
         <Row>
           <Col>
             <div className="container mx-auto items-center flex flex-wrap">
@@ -42,7 +82,10 @@ export default function Index() {
                   <h2 className="font-semibold text-4xl text-gray-700">
                     IRADA
                   </h2>
-                  <p className="mt- text-lg leading-relaxed text-gray-600">
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <p className="mt- text-xl leading-relaxed text-gray-600">
                     IRADA Consulting is a private engineering and consulting
                     firm founded by a high qualified and experienced team. We
                     are a Project and Business Development Company. IRADA
@@ -64,177 +107,164 @@ export default function Index() {
         </Row>
       </section>
 
-      <section className="mt-48 md:mt-40 pb-40 relative bg-gray-200">
-        <div
-          className="-mt-20 top-0 bottom-auto left-0 right-0 w-full absolute h-20"
-          style={{ transform: "translateZ(0)" }}>
-          <svg
-            className="absolute bottom-0 overflow-hidden"
-            xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="none"
-            version="1.1"
-            viewBox="0 0 2560 100"
-            x="0"
-            y="0">
-            <polygon
-              className="text-gray-200 fill-current"
-              points="2560 0 2560 100 0 100"></polygon>
-          </svg>
-        </div>
-        <div className="container mx-auto">
-          <div className="flex flex-wrap items-center">
-            <div className="w-10/12 md:w-6/12 lg:w-4/12 px-12 md:px-4 mr-auto ml-auto -mt-32">
-              <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-gray-800">
-                <img
-                  alt="..."
-                  src="https://scontent.ftun4-1.fna.fbcdn.net/v/t1.15752-9/125425049_999510163894752_8108865946730156680_n.png?_nc_cat=100&ccb=2&_nc_sid=ae9488&_nc_ohc=KNV6gIGjK8gAX9X6_Iq&_nc_ht=scontent.ftun4-1.fna&oh=dc3494a39c8881bdb967fbf6929944a0&oe=5FDA2EFB"
-                  className="w-250px align-middle rounded-t-lg"
-                />
-                <blockquote className="relative p-8 mb-4">
-                  <svg
-                    preserveAspectRatio="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 583 95"
-                    className="absolute left-0 w-full block h-95-px -top-94-px">
-                    <polygon
-                      points="-30,95 583,95 583,65"
-                      className="text-gray-800 fill-current"></polygon>
-                  </svg>
-                  <h4 className="text-xl font-bold text-black">Services</h4>
-                </blockquote>
-              </div>
+      <section className="mt-48 md:mt-40 pb-40 bg-gray-200 relative ">
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <h3 className="text-4xl font-normal  ml-4  mb-2 text-blue-800">
+          &nbsp;
+          <i class="fas fa-chalkboard-teacher"></i>
+          &nbsp; Team members
+        </h3>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <div className="container px-4 mx-auto">
+          <div className="flex flex-wrap">
+            <div className="w-full px-4 flex-1">
+              <span className="my-4 p-4 text-gray-800 border-solid ">
+                <div className="w-full">
+                  <div className="px-6 ">
+                    <div className="flex flex-wrap justify-center">
+                      <div className="w-6/12 sm:w-4/12 px-4">
+                        <img
+                          src="https://demos.creative-tim.com/tailwindcss-starter-project/_next/static/images/team-3-800x800-19201574ed51f77138a739c0452ca104.jpg"
+                          alt="..."
+                          className="shadow-lg rounded max-w-full h-auto align-middle border-none"
+                        />
+                      </div>
+                    </div>
+                    <div className="pt-8">
+                      <h5 className="text-xl font-bold">Faycel IDOUDI</h5>
+                      <h6 className="text-xl font-normal  mt-0 mb-2 text-gray-800">
+                        Petroleum Engineer Founder & Business Development
+                        Manager
+                      </h6>
+                    </div>
+                  </div>
+                </div>
+              </span>
             </div>
-
-            <div className="w-full md:w-6/12 px-4">
-              <div className="flex flex-wrap">
-                <div className="w-full md:w-9/12 px-4">
-                  <div className="relative flex flex-col mt-4">
-                    <div className="px-4 py-5 ">
-                      <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-15 h-15 mb-5 shadow-lg rounded-full bg-white">
-                        <i className="fas fa-sitemap"></i>
+            <div className="w-full px-4 flex-1">
+              <span className="my-4 p-4 text-gray-800 border-solid ">
+                <div className="w-full">
+                  <div className="px-6 ">
+                    <div className="flex flex-wrap justify-center">
+                      <div className="w-6/12 sm:w-4/12 px-4">
+                        <img
+                          src="https://demos.creative-tim.com/tailwindcss-starter-project/_next/static/images/team-3-800x800-19201574ed51f77138a739c0452ca104.jpg"
+                          alt="..."
+                          className="shadow-lg rounded max-w-full h-auto align-middle border-none"
+                        />
                       </div>
-                      <h6 className="text-xl mb-1 font-semibold">
-                        Dans le domaine de l’environnement
-                      </h6>
-                      <p className="mb-6 text-gray-600">
-                        Etudes d’Impact Environnementales et Sociales Etudes de
-                        Dépollution et Diagnostic des sites pollués. Programme
-                        de gestion, traitement et valorisation des déchets
-                        solides et liquides. Accompagnement des clients à la
-                        mise en place d’un système de Management
-                        Environnementale selon les référentiels ISO14001 Mesures
-                        et modélisation des émissions atmosphériques et de la
-                        pollution marine par les hydrocarbures et les substances
-                        chimique. Elaboration et animation des enquêtes
-                        publiques et sociales.
-                      </p>
                     </div>
-                  </div>
-                  <div className="relative flex flex-col min-w-0">
-                    <div className="px-4  flex-auto">
-                      <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
-                        <i className="fas fa-drafting-compass"></i>
-                      </div>
-                      <h6 className="text-xl mb-1 font-semibold">
-                        Dans le domaine de sécurité Industrielle
+                    <div className="pt-8">
+                      <h5 className="text-xl font-bold">Sonia CHEOUR</h5>
+                      <h6 className="text-xl font-normal  mt-0 mb-2 text-gray-800">
+                        Master in Legal Science
                       </h6>
-                      <p className="mb-4 text-gray-600">
-                        Etude de Dangers Etude de Sécurité Incendie Plans
-                        d’Urgence Accompagnement des clients à la mise en place
-                        des programmes de sécurité
-                      </p>
                     </div>
                   </div>
                 </div>
-                <div className="w-full md:w-6/12 px-4">
-                  <div className="relative flex flex-col min-w-0 mt-4">
-                    <div className="px-4 py-5 flex-auto">
-                      <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
-                        <i className="fas fa-newspaper"></i>
+              </span>
+            </div>
+            <div className="w-full px-4 flex-1">
+              <span className="my-4 p-4 text-gray-800 border-solid ">
+                <div className="w-full">
+                  <div className="px-6 ">
+                    <div className="flex flex-wrap justify-center">
+                      <div className="w-6/12 sm:w-4/12 px-4">
+                        <img
+                          src="https://demos.creative-tim.com/tailwindcss-starter-project/_next/static/images/team-3-800x800-19201574ed51f77138a739c0452ca104.jpg"
+                          alt="..."
+                          className="shadow-lg rounded max-w-full h-auto align-middle border-none"
+                        />
                       </div>
-                      <h6 className="text-xl mb-1 font-semibold">
-                        Dans le domaine de l’infrastructure
-                      </h6>
-                      <p className="mb-2 text-gray-600">
-                        APS, APD et préparation des appels d’offres pour les
-                        ouvrages hydrauliques et les travaux d’aménagement CES
-                        Conception et assistance à mise en place des stations de
-                        traitements des eaux industrielles et domestiques
-                        Programme d’aménagement des zones industrielles et
-                        urbaines Audit de l’eau et élaboration des programmes
-                        d’économie d’eau
-                      </p>
                     </div>
-                  </div>
-                  <div className="relative flex flex-col min-w-0">
-                    <div className="px-4 py-5 flex-auto">
-                      <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
-                        <i className="fas fa-file-alt"></i>
-                      </div>
-                      <h6 className="text-l mb-3 font-semibold">
-                        Dans le domaine de la formation et Assistance technique
+                    <div className="pt-8">
+                      <h5 className="text-xl font-bold">Mohamed MAARREF</h5>
+                      <h6 className="text-xl font-normal  mt-0 mb-2 text-gray-800">
+                        Georesources Engineer Manager
                       </h6>
-                      <p className="mb-4 text-gray-600">
-                        Conception des bases de données géographique Formation
-                        en système d’information géographique Formation dans les
-                        domaines suivants: L’Environnement Sécurité Hygiène
-                      </p>
                     </div>
                   </div>
                 </div>
-              </div>
+              </span>
             </div>
           </div>
         </div>
-
-        <div className="container mx-auto overflow-hidden pb-20">
-          <div className="flex flex-wrap items-center">
-            <div className="w-full md:w-4/12 px-12 md:px-4 ml-auto mr-auto mt-48">
-              <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
-                <i className="fas fa-sitemap text-xl"></i>
-              </div>
-              <h3 className="text-3xl mb-2 font-semibold leading-normal">
-                Team members
-              </h3>
-              <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
-                greeting
-              </p>
-              <div className="block pb-6">
-                <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-gray-600 bg-white uppercase last:mr-0 mr-2 mt-2">
-                  Buttons
-                </span>
-                <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-gray-600 bg-white uppercase last:mr-0 mr-2 mt-2">
-                  Inputs
-                </span>
-                <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-gray-600 bg-white uppercase last:mr-0 mr-2 mt-2">
-                  Labels
-                </span>
-                <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-gray-600 bg-white uppercase last:mr-0 mr-2 mt-2">
-                  Menus
-                </span>
-                <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-gray-600 bg-white uppercase last:mr-0 mr-2 mt-2">
-                  Navbars
-                </span>
-                <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-gray-600 bg-white uppercase last:mr-0 mr-2 mt-2">
-                  Pagination
-                </span>
-                <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-gray-600 bg-white uppercase last:mr-0 mr-2 mt-2">
-                  Progressbars
-                </span>
-                <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-gray-600 bg-white uppercase last:mr-0 mr-2 mt-2">
-                  Typography
-                </span>
-              </div>
+        <div className="container px-4 mx-auto">
+          <div className="flex flex-wrap">
+            <div className="w-full px-4 flex-1">
+              <span className="my-4 p-4 text-gray-800 border-solid ">
+                <div className="w-full">
+                  <div className="px-6 ">
+                    <div className="flex flex-wrap justify-center">
+                      <div className="w-6/12 sm:w-4/12 px-4">
+                        <img
+                          src="https://demos.creative-tim.com/tailwindcss-starter-project/_next/static/images/team-3-800x800-19201574ed51f77138a739c0452ca104.jpg"
+                          alt="..."
+                          className="shadow-lg rounded max-w-full h-auto align-middle border-none"
+                        />
+                      </div>
+                    </div>
+                    <div className="pt-8">
+                      <h5 className="text-xl font-bold">Dr Rabeh Alouini</h5>
+                      <h6 className="text-xl font-normal  mt-0 mb-2 text-gray-800">
+                        Geology & Mines
+                      </h6>
+                    </div>
+                  </div>
+                </div>
+              </span>
             </div>
-
-            <div className="w-full md:w-5/12 px-4 mr-auto ml-auto mt-32">
-              <div className="relative flex flex-col min-w-0 w-full mb-6 mt-48 md:mt-0">
-                <img
-                  alt="..."
-                  src={require("assets/img/component-profile-card.png")}
-                  className="w-full align-middle rounded-lg absolute shadow-lg max-w-210-px left-260-px -top-160-px"
-                />
-              </div>
+            <div className="w-full px-4 flex-1">
+              <span className="my-4 p-4 text-gray-800 border-solid ">
+                <div className="w-full">
+                  <div className="px-6 ">
+                    <div className="flex flex-wrap justify-center">
+                      <div className="w-6/12 sm:w-4/12 px-4">
+                        <img
+                          src="https://demos.creative-tim.com/tailwindcss-starter-project/_next/static/images/team-3-800x800-19201574ed51f77138a739c0452ca104.jpg"
+                          alt="..."
+                          className="shadow-lg rounded max-w-full h-auto align-middle border-none"
+                        />
+                      </div>
+                    </div>
+                    <div className="pt-8">
+                      <h5 className="text-xl font-bold">Nadia IDOUDI</h5>
+                      <h6 className="text-xl font-normal  mt-0 mb-2 text-gray-800">
+                        Financial Advisor
+                      </h6>
+                    </div>
+                  </div>
+                </div>
+              </span>
+            </div>
+            <div className="w-full px-4 flex-1">
+              <span className="my-4 p-4 text-gray-800 border-solid ">
+                <div className="w-full">
+                  <div className="px-6 ">
+                    <div className="flex flex-wrap justify-center">
+                      <div className="w-6/12 sm:w-4/12 px-4">
+                        <img
+                          src="https://demos.creative-tim.com/tailwindcss-starter-project/_next/static/images/team-3-800x800-19201574ed51f77138a739c0452ca104.jpg"
+                          alt="..."
+                          className="shadow-lg rounded max-w-full h-auto align-middle border-none"
+                        />
+                      </div>
+                    </div>
+                    <div className="pt-8">
+                      <h5 className="text-xl font-bold">Yssine MESTIRI</h5>
+                      <h6 className="text-xl font-normal  mt-0 mb-2 text-gray-800">
+                        Phd: Energy and Oil & Gas Expert
+                      </h6>
+                    </div>
+                  </div>
+                </div>
+              </span>
             </div>
           </div>
         </div>
@@ -246,107 +276,93 @@ export default function Index() {
                 <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
                   <i className="fas fa-file-alt text-xl"></i>
                 </div>
-                <h3 className="text-3xl font-semibold">other title</h3>
-                <p className="mt-4 text-lg leading-relaxed text-gray-600">
-                  Description
-                </p>
-                <ul className="list-none mt-6">
-                  <li className="py-2">
-                    <div className="flex items-center">
-                      <div>
-                        <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-gray-600 bg-gray-100 mr-3">
-                          <i className="fas fa-fingerprint"></i>
-                        </span>
-                      </div>
-                      <div>
-                        <h4 className="text-gray-600">Sub title</h4>
-                      </div>
-                    </div>
-                  </li>
-                  <li className="py-2">
-                    <div className="flex items-center">
-                      <div>
-                        <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-gray-600 bg-gray-100 mr-3">
-                          <i className="fab fa-html5"></i>
-                        </span>
-                      </div>
-                      <div>
-                        <h4 className="text-gray-600">Sub title</h4>
-                      </div>
-                    </div>
-                  </li>
-                  <li className="py-2">
-                    <div className="flex items-center">
-                      <div>
-                        <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-gray-600 bg-gray-100 mr-3">
-                          <i className="far fa-paper-plane"></i>
-                        </span>
-                      </div>
-                      <div>
-                        <h4 className="text-gray-600">Sub title</h4>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
+                <h3 className="text-3xl font-semibold">Our clients</h3>
               </div>
             </div>
 
             <div className="w-full md:w-6/12 mr-auto px-4 pt-24 md:pt-0">
-              <img
-                alt="..."
-                className="max-w-full rounded-lg shadow-xl"
-                style={{
-                  transform:
-                    "scale(1) perspective(1040px) rotateY(-11deg) rotateX(2deg) rotate(2deg)",
-                }}
-                src={require("assets/img/naturee.jpg")}
-              />
+              
+               <div className="w-full px-4 flex-1">
+          <span className="text-sm block my-4 p-3 ">
+            {/* <UncontrolledCarousel style={{width: '200px',height:'200px'}}  items={items2} /> */}
+            <Carousel activeIndex={index} onSelect={handleSelect}>
+      <Carousel.Item>
+        <img
+          style = {{width:'300 px', height : '300px'}}
+          className="d-block w-100"
+          src="assets/img/logo/omv.png"
+          alt="First slide"
+        />
+       
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+        style = {{width:'300 px', height : '300px'}}
+          className="d-block w-100"
+          src=""
+          alt="Second slide"
+        />
+
+        
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+         style = {{width:'300 px', height : '300px'}}
+          className="d-block w-100"
+          src="../assets/img/logo/anged.png"
+          alt="Third slide"
+        />
+
+       
+      </Carousel.Item>
+    </Carousel>
+          </span>
+        </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="block relative z-1 bg-gray-700">
+      <section className="mt-48 md:mt-40 pb-40 bg-gray-200  ">
+        <style jsx>{`
+          #marg {
+            margin-left: 100px;
+          }
+          #marg1 {
+            margin-left: 250px;
+          }
+          #logoSec {
+            background-color: #d3d3d3;
+          }
+        `}</style>
+
         <div className="container px-4 mx-auto">
           <div className="flex flex-wrap ">
             <div className="w-full px-4  -mt-24 w-full px-4 flex-1">
               <div className="flex flex-wrap">
-                <div className="w-full lg:w-4/12 px-4">
-                  <h5 className="text-xl font-semibold pb-4 text-center">
-                    Login Page
-                  </h5>
+                <div className="w-full lg:w-4/12 px-4" id="marg">
                   <Link href="/auth/login">
-                    <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
+                    <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words  w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
+                      <br></br>
+                      <h5 className="text-xl font-semibold pb-4 text-center">
+                        Login Page
+                      </h5>
                       <img
                         alt="..."
-                        className="align-middle border-none max-w-full h-auto rounded-lg"
+                        className="align-middle border-none  h-auto rounded-lg"
                         src={require("assets/img/login.jpg")}
                       />
                     </div>
                   </Link>
                 </div>
 
-                {/* <div className="w-full lg:w-4/12 px-4">
-                  <h5 className="text-xl font-semibold pb-4 text-center">
-                    Profile Page
-                  </h5>
-                  <Link href="/profile">
-                    <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
-                      <img
-                        alt="..."
-                        className="align-middle border-none max-w-full h-auto rounded-lg"
-                        src={require("assets/img/profile.jpg")}
-                      />
-                    </div>
-                  </Link>
-                </div>  */}
-
-                <div className="w-full lg:w-4/12 px-4">
-                  <h5 className="text-xl font-semibold pb-4 text-center">
-                    Contact us
-                  </h5>
+                <div className="w-full lg:w-4/12 px-4" id="marg1">
                   <Link href="/landing">
-                    <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
+                    <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words  w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
+                      <br></br>
+                      <h5 className="text-xl font-semibold pb-4 text-center">
+                        Contact us
+                      </h5>
                       <img
                         alt="..."
                         className="align-middle border-none max-w-full h-auto rounded-lg"
@@ -377,9 +393,107 @@ export default function Index() {
                   </Link>
                 </div>
       </section> */}
+      <section className="py-20 bg-gray-700 overflow-hidden">
+        <div className="container mx-auto pb-64">
+          <div className="flex flex-wrap justify-center">
+            <div className="w-full md:w-5/12 px-12 md:px-4 ml-auto mr-auto md:mt-64">
+              <h3 className="text-3xl mb-2 font-semibold leading-normal text-white">
+                MAIN REFERENCES PROJECT
+              </h3>
+              <span className="text-xl font-semibold inline-block py-1 px-2 uppercase rounded-full text-gray-600 bg-gray-100 mr-3">
+                <h5>
+                  {" "}
+                  <i class="fas fa-seedling"></i> ENVIRONMENT
+                </h5>
+              </span>
+              <br></br> <br></br>
+              <span className="text-xl font-semibold inline-block py-1 px-2 uppercase rounded-full text-gray-600 bg-gray-100 mr-3">
+                <h5>
+                  {" "}
+                  <i class="fas fa-satellite"></i> RENWEABLE ENERGY{" "}
+                </h5>
+              </span>
+            </div>
 
-      <section className="pb-16 bg-gray-300 relative pt-32"></section>
+            <div className="w-full md:w-4/12 px-4 mr-auto ml-auto mt-32 relative">
+              <i className="fas fa-cloud-sun text-gray-800 absolute text-55 -top-150-px -right-100 left-auto opacity-80"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="pb-16 bg-gray-300 relative pt-32">
+        <div
+          className="-mt-20 top-0 bottom-auto left-0 right-0 w-full absolute h-20"
+          style={{ transform: "translateZ(0)" }}>
+          <svg
+            className="absolute bottom-0 overflow-hidden"
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="none"
+            version="1.1"
+            viewBox="0 0 2560 100"
+            x="0"
+            y="0">
+            <polygon
+              className="text-gray-300 fill-current"
+              points="2560 0 2560 100 0 100"></polygon>
+          </svg>
+        </div>
+
+        <div id='partners' className="container mx-auto">
+          <div className="flex flex-wrap justify-center bg-white shadow-xl rounded-lg -mt-64 py-16 px-12 relative z-10">
+            <div className="w-full text-center lg:w-8/12">
+              <p className="text-4xl text-center">
+                <span role="img" aria-label="love">
+                  😍
+                </span>
+              </p>
+              <h3 className="font-semibold text-3xl">Our partner</h3>
+              <br></br><br></br><br></br><br></br>
+              <div >
+                <Row>
+                  
+                <a
+                  href="http://www.mpscompany.net/"
+                  target="_blank"
+                  >                  
+                <div className="flex flex-wrap justify-center">
+                    <div>
+                      <img
+                        style={{width:'150px' ,height:'300px', marginRight:'200px',marginLeft:'150px'}}
+                        src="http://www.mpscompany.net/assets/images/logo2.png"
+                        
+                        className="shadow-lg rounded-full  h-auto  border-none"
+                      />
+                    </div>
+                  </div>
+                </a>
+                <a
+                  href="https://www.geo-arch.net/"
+                  target="_blank"
+                  >                  
+                  <div className="flex flex-wrap justify-center">
+                    <div>
+                      <img
+                        style={{width:'150px'}}
+                        src="https://www.geo-arch.net/____impro/1/onewebmedia/geoArch.logo%20petit%202.png?etag=%2225cf-5a1d7ce6%22&sourceContentType=image%2Fpng"
+                        alt="..."
+                        className="shadow-lg rounded-full  h-auto  border-none"
+                      />
+                    </div>
+                  </div>
+                </a>
+                </Row>
+              </div>
+              <div className="text-center mt-16"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+     
       <Footer />
+      <div></div>
     </>
   );
 }

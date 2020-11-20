@@ -64,13 +64,28 @@ export default function Index() {
   
   const [showModal, setShowModal] = useState(true);
   const [index, setIndex] = useState(0);
+  let [count, setCount] = useState(0);
 
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
   };
 
+  // useEffect(() => {
+  //   // Update the document title using the browser API
+  //   return () => {
+  //     console.log("destried");
+  //   }
+  // });
+
   return (
     <>
+
+      {count}
+      <button onClick={() => {
+        setCount(++count);
+      }}>Increment</button>
+
+
       <IndexNavbar fixed />
       {/* <Modal style={{"z-index":"2"}}/> */}
       <section className="header relative pt-16 items-center flex h-screen bg-white max-h-860-px">
@@ -280,7 +295,7 @@ export default function Index() {
               </div>
             </div>
 
-            <div className="w-full md:w-6/12 mr-auto px-4 pt-24 md:pt-0">
+            <div className=" md:w-6/12 mr-auto px-4 pt-24 md:pt-0">
               
                <div className="w-full px-4 flex-1">
           <span className="text-sm block my-4 p-3 ">
@@ -288,18 +303,19 @@ export default function Index() {
             <Carousel activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
         <img
-          style = {{width:'300 px', height : '300px'}}
-          className="d-block w-100"
-          src="assets/img/logo/omv.png"
+          style = {{width:'500px', height : '150px'}}
+         
+          src="http://www.anged.nat.tn/images/logo-anged.png"
           alt="First slide"
         />
        
       </Carousel.Item>
       <Carousel.Item>
         <img
-        style = {{width:'300 px', height : '300px'}}
-          className="d-block w-100"
-          src=""
+          style = {{width:'500px', height : '150px'}}
+     
+         
+          src="http://www.anpe.nat.tn/Fr/static/fr/img/gif/logo.gif"
           alt="Second slide"
         />
 
@@ -307,14 +323,84 @@ export default function Index() {
       </Carousel.Item>
       <Carousel.Item>
         <img
-         style = {{width:'300 px', height : '300px'}}
-          className="d-block w-100"
-          src="../assets/img/logo/anged.png"
+                  style = {{width:'500px', height : '150px'}}
+
+          src="https://www.tunisietravail.net/uploads/2018/04/atlas-engineering.png"
           alt="Third slide"
         />
 
        
       </Carousel.Item>
+      <Carousel.Item>
+        <img
+                   style = {{width:'500px', height : '150px'}}
+
+          src="https://www.espacemanager.com/sites/default/files/images/societes/bg_tunisia.jpg"
+          alt="Third slide"
+        />
+
+       
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+                 style = {{width:'500px', height : '150px'}}
+
+          src="https://consumer-res.huawei.com/etc/designs/huawei-cbg-site/clientlib-campaign-v4/common-v4/images/logo.svg"
+          alt="Third slide"
+        />
+
+       
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+                  style = {{width:'500px', height : '150px'}}
+
+          
+          src="https://scontent.ftun4-1.fna.fbcdn.net/v/t1.0-9/944480_484762968258597_875741996_n.jpg?_nc_cat=103&ccb=2&_nc_sid=09cbfe&_nc_ohc=fWroIy839hEAX8pZsDQ&_nc_ht=scontent.ftun4-1.fna&oh=92c560d14cfaa4d0285aa0c08fc7d635&oe=5FDB79FF"
+      
+        />
+
+       
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+                  style = {{width:'500px', height : '150px'}}
+
+         
+          src="https://www.omv.tn/assets/head/omv/logo-670x377.png"
+      
+        />
+
+       
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+                   style = {{width:'500px', height : '150px'}}
+
+         
+          src="https://www.espacemanager.com/sites/default/files/field/image/coupure_eau_2304.jpg"
+         
+        />
+
+       
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          style = {{width:'500px', height : '150px'}}
+
+          src="https://www.espacemanager.com/sites/default/files/field/image/coupure_eau_2304.jpg"
+         
+        />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          style = {{width:'500px', height : '150px'}}
+
+          src="https://www.espacemanager.com/sites/default/files/field/image/coupure_eau_2304.jpg"
+         
+        />
+      </Carousel.Item>
+      
     </Carousel>
           </span>
         </div>

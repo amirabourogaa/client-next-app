@@ -1,11 +1,23 @@
-import React from "react";
+import React, {useState,useEffect} from "react";
 import Link from "next/link";
-
+import axios from 'axios';
 // layout for page
 
 import Auth from "layouts/Auth.js";
 
 export default function Login() {
+
+  const logIn = () => {
+    const data = { title: 'React POST Request Example' };
+    axios.post('https://reqres.in/invalid-url', article)
+        .then(response => this.setState({ articleId: response.data.id }))
+        .catch(error => {
+            this.setState({ errorMessage: error.message });
+            console.error('There was an error!', error);
+        });
+  }
+
+
   return (
     <>
       <div className="container mx-auto px-4 h-full">

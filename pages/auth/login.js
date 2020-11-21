@@ -7,16 +7,21 @@ import Auth from "layouts/Auth.js";
 
 export default function Login() {
 
-  const logIn = () => {
-    const data = { title: 'React POST Request Example' };
-    axios.post('https://reqres.in/invalid-url', article)
-        .then(response => this.setState({ articleId: response.data.id }))
-        .catch(error => {
-            this.setState({ errorMessage: error.message });
-            console.error('There was an error!', error);
-        });
-  }
+  const submit = (e) => {
+    e.preventDefault();
+    let obj = {};
+    obj.email = document.getElementById("email").value;
+    obj.password = document.getElementById("password").value;
 
+    localStorage.setItem('login',JSON.stringify(obj))
+    axios.post("https://server-cunsulting.herokuapp.com/Client/login", obj).then((res) => {
+      console.log(res);
+    });
+
+    e.preventDefault();
+
+   
+  };
 
   return (
     <>
@@ -35,7 +40,7 @@ export default function Login() {
               </div>
               <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
                
-                <form>
+                <form onSubmit={submit}>
                   <div className="relative w-full mb-3">
                     <label
                       className="block uppercase text-gray-700 text-xs font-bold mb-2"
@@ -44,6 +49,7 @@ export default function Login() {
                       Email
                     </label>
                     <input
+                      id='email'
                       type="email"
                       className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full ease-linear transition-all duration-150"
                       placeholder="Email"
@@ -58,6 +64,7 @@ export default function Login() {
                       Password
                     </label>
                     <input
+                      id='password'
                       type="password"
                       className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full ease-linear transition-all duration-150"
                       placeholder="Password"
@@ -77,12 +84,14 @@ export default function Login() {
                   </div>
 
                   <div className="text-center mt-6">
+                  <Link href="/register">
                     <button
                       className="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
-                      type="button"
+                      type="submit"
                     >
                       Sign In
                     </button>
+                    </Link>
                   </div>
                 </form>
               </div>
@@ -90,7 +99,7 @@ export default function Login() {
             <div className="flex flex-wrap mt-6 relative">
               <div className="w-1/2">
                 <a
-                  href="#pablo"
+                  href=""
                   onClick={(e) => e.preventDefault()}
                   className="text-gray-300"
                 >

@@ -61,13 +61,13 @@ export default function Landing() {
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap">
               <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
-                <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+                <div id='transparent' className="relative flex flex-col min-w-0 break-words bg-black  w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-4 py-5 flex-auto">
                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
                       <i className="fas fa-award"></i>
                     </div>
-                    <h6 className="text-xl font-semibold">Our Agency</h6>
-                    <p className="mt-2 mb-4 text-gray-600">
+                    <h6 className="text-xl text-black font-semibold">Our Agency</h6>
+                    <p className="mt-2 mb-4 text-white">
                       IRADA Consulting is a leading consulting company founded
                       by a group of highly qualified multidisciplinary experts,
                       with many years of experience in the field of engineering
@@ -76,7 +76,11 @@ export default function Landing() {
                   </div>
                 </div>
               </div>
-
+              <style jsx>{`
+        #transparent {
+              --bg-opacity : 0.4;
+        }
+      `}</style>
               <div className="w-full md:w-4/12 px-4 text-center">
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-4 py-5 flex-auto">
@@ -131,11 +135,7 @@ export default function Landing() {
                   good to go. Just make sure you enable them first via
                   JavaScript.
                 </p>
-                <Link href="/">
-                  <a href="#pablo" className="font-bold text-gray-800 mt-8">
-                    Check Notus NextJS!
-                  </a>
-                </Link>
+                
               </div>
 
               <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">

@@ -22,6 +22,7 @@ export default function Navbar(props) {
   const closeDropdownPopover = () => {
     setDropdownPopoverShow(false);
   };
+  
   return (
     <>
      
@@ -37,7 +38,7 @@ export default function Navbar(props) {
   <div className="collapse navbar-collapse" id="navbarColor02">
     <ul className="navbar-nav mr-auto">
       <li className="nav-item active">
-        <a className="nav-link" href="/">Home
+        <a className="nav-link" href="/home">Home
           
         </a>
       </li>
@@ -56,6 +57,7 @@ export default function Navbar(props) {
     </ul>
     
   </div>
+ 
 </nav>
     </>
   );

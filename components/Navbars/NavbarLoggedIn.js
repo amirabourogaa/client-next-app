@@ -1,12 +1,11 @@
-import React, { Component } from "react";
-//import CustomDropdown from "./components/CustomDropdown/CustomDropdown.js";
-//import React from "react";
+import React from "react";
+import Link from "next/link";
 import { createPopper } from '@popperjs/core';
 // components
 import "bootswatch/dist/slate/bootstrap.min.css";
 import "bootswatch/dist/Cerulean/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import Link from "next/link";
+
 
 export default function Navbar(props) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
@@ -22,8 +21,6 @@ export default function Navbar(props) {
   const closeDropdownPopover = () => {
     setDropdownPopoverShow(false);
   };
-
-  
   
   return (
     <>
@@ -51,13 +48,21 @@ export default function Navbar(props) {
         <a className="nav-link" href="/modal">Services</a>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="">About</a>
+        <a className="nav-link" href="#">About</a>
       </li>
       <li className="nav-item">
         <a className="nav-link" href="#partners">Partners</a>
       </li>
     </ul>
+    <div class="form-inline my-2 my-lg-0">
+     
     
+    <button type="button" class="btn btn-primary">My space</button>
+    &nbsp;&nbsp;
+    <Link href="/auth/login">
+    <button type="button" class="btn btn-primary">Log out</button>
+    </Link>
+    </div>
   </div>
  
 </nav>

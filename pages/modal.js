@@ -7,7 +7,7 @@ import { Zoom } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import $ from 'jquery'
 import Carousel from "react-material-ui-carousel";
-//import { LogoSlider } from "../components/logoSlider";
+
 
 const Tabs = () => {
   

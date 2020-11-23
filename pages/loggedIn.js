@@ -3,13 +3,13 @@ import Link from "next/link";
 import "bootswatch/dist/slate/bootstrap.min.css";
 import "bootswatch/dist/Cerulean/bootstrap.min.css";
 import { UncontrolledCarousel, Row, Col } from "reactstrap";
-import IndexNavbar from "components/Navbars/IndexNavbar.js";
+import NavbarLoggedIn from "components/Navbars/NavbarLoggedIn.js";
 import Footer from "components/Footers/Footer.js";
 import Modal from "./modal.js";
 import Carousel from "react-bootstrap/Carousel";
+//import Image from 'next/image'
 
-
-
+import { left } from "@popperjs/core";
 
 const items = [
   {
@@ -69,10 +69,10 @@ export default function Index() {
 
   return (
     <>
-      <IndexNavbar fixed />
+      <NavbarLoggedIn fixed />
       {/* <Modal style={{"z-index":"2"}}/> */}
       <section
-        // style={{backgroundImage: `url(${'https://thumbs.gfycat.com/ImmenseAnxiousIceblueredtopzebra-small.gif'})`,  backgroundRepeat:'repeat-y' ,backgroundSize:'cover' }}
+       
         className="header relative pt-16 items-center flex h-screen bg-white max-h-860-px">
         <Row>
           <Col>

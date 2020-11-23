@@ -56,8 +56,9 @@ export default function Navbar(props) {
     </ul>
     <div class="form-inline my-2 my-lg-0">
      
-    
+    <Link href="profile">
     <button type="button" class="btn btn-primary">My space</button>
+    </Link>
     &nbsp;&nbsp;
     <Link href="/auth/login">
     <button type="button" class="btn btn-primary">Log out</button>

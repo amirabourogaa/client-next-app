@@ -7,7 +7,7 @@ import { Zoom } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import $ from 'jquery'
 import Carousel from "react-material-ui-carousel";
-//import { LogoSlider } from "../components/logoSlider";
+
 
 const Tabs = () => {
   
@@ -92,7 +92,7 @@ const Tabs = () => {
                   <div className="w-6/12 sm:w-4/12 px-4">
                     <img
                       style={{ marginTop: "50px", marginBottom: "50px" }}
-                      src="https://lh3.googleusercontent.com/proxy/gqv5fXs6pZfULcKx0dU1suwId9ifeGWkdSBbDh8HvwpERz6VwJukQs8t0jupybc-l9dPYE6d4HwG8DMZnHSW9yhXBAyiL2DKbeJ93t17v-4e3JRknTIzuoqOH8MxCias_ypA5FCev0bggFe-"
+                      src="https://i2.wp.com/www.irishcatholic.com/wp-content/uploads/2017/02/environment-1.jpg?fit=520%2C300&ssl=1"
                       alt="..."
                       className="shadow-lg rounded max-w-full h-auto align-middle border-none"
                     />

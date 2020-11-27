@@ -14,21 +14,21 @@ const Tabs = () => {
 
   const items = [
     {
-      src: require("assets/img/naturee.jpg"),
+      src: require("assets/img/irada.jpg"),
       altText: "Slide 1",
       caption: "",
       header: "",
       key: "1",
     },
     {
-      src: require("assets/img/naturee2.jpg"),
+      src: require("assets/img/irada1.jpg"),
       altText: "Slide 2",
       caption: "",
       header: "",
       key: "2",
     },
     {
-      src: require("assets/img/sunEnergy.jpg"),
+      src: require("assets/img/irada2.jpg"),
       altText: "Slide 3",
       caption: "",
       header: "",

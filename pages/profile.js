@@ -21,7 +21,7 @@ export default function Profile() {
       align-items : start ;
     }
     .menu-bars {
-      margin-left : 200px ;
+      margin-left : 2rem ;
       font-size : 200px ;
       background : none ;
     }

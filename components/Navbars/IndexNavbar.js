@@ -54,7 +54,7 @@ export default function Navbar(props) {
         <a className="nav-link" href="">About us</a>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="">Main Refrences</a>
+        <a className="nav-link" href="/mainRef">Main Refrences</a>
       </li>
 
       <li className="nav-item">

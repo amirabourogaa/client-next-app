@@ -4,7 +4,8 @@ import Link from "next/link";
 import NavbarLoggedIn from "components/Navbars/NavbarLoggedIn.js";
 import * as FaIcons  from "react-icons/fa";
 import * as AiIcons  from "react-icons/ai";
-import {SideNavData} from '../pages/SideNavData.js'
+import {SideNavData} from '../pages/SideNavData.js';
+
 export default function Profile() {
   const [sidebar , setSideBar] = useState(false)
  const showSidebar = ()=> setSideBar(!sidebar)

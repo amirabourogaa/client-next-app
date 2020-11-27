@@ -99,7 +99,7 @@ const Tabs = () => {
 
                 <div
                   className="card-footer "
-                  style={{ backgroundColor: "black" }}>
+                  style={{ backgroundColor: "white" }}>
                   <div className="card">
                     <div className="card-body">
                       <h4 className="card-title text-xl">Description </h4>
@@ -141,7 +141,7 @@ const Tabs = () => {
 
                 <div
                   className="card-footer "
-                  style={{ backgroundColor: "black" }}>
+                  style={{ backgroundColor: "white" }}>
                   <div className="card">
                     <div className="card-body ">
                       <h4 className="card-title text-xl">Description </h4>
@@ -179,7 +179,7 @@ const Tabs = () => {
 
                 <div
                   className="card-footer   style = {{backgroundColor :'black'}}"
-                  style={{ backgroundColor: "black" }}>
+                  style={{ backgroundColor: "white" }}>
                   <div className="card">
                     <div className="card-body">
                       <h4 className="card-title text-xl">Description </h4>
@@ -220,7 +220,7 @@ const Tabs = () => {
 
                 <div
                   className="card-footer "
-                  style={{ backgroundColor: "black" }}>
+                  style={{ backgroundColor: "white" }}>
                   <div className="card">
                     <div className="card-body">
                       <h4 className="card-title text-xl">Description </h4>

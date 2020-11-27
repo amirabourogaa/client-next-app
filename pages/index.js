@@ -479,7 +479,7 @@ export default function Index() {
                       <tr >
                         <td>
                           
-  <div style={{backgroundColor:'whitesmoke', marginRight:'100px'}} class="card mb-3">
+  <div style={{backgroundColor:'whitesmoke', marginRight:'100px',width:'200px'}} class="card mb-3">
     <br></br>
   <h1 >MPS</h1>
  <br></br>

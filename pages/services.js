@@ -1,12 +1,10 @@
 import React, { Fragment, useEffect } from "react";
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
-import { UncontrolledCarousel, Row, Col, Button } from "reactstrap";
+import { UncontrolledCarousel, Row} from "reactstrap";
 import "bootswatch/dist/slate/bootstrap.min.css";
 import "react-slideshow-image/dist/styles.css";
-import { Zoom } from "react-slideshow-image";
+
 import "react-slideshow-image/dist/styles.css";
-import $ from 'jquery'
-import Carousel from "react-material-ui-carousel";
 
 
 const Tabs = () => {
@@ -42,7 +40,7 @@ const Tabs = () => {
     <>
       <IndexNavbar fixed />
       
-
+    
       
 
 

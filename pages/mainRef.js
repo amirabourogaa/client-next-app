@@ -1,107 +1,75 @@
 import React, {useState} from "react";
 import Link from "next/link";
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
-
+import "bootswatch/dist/slate/bootstrap.min.css";
 import * as FaIcons  from "react-icons/fa";
-import * as AiIcons  from "react-icons/ai";
+import TiUploadOutline  from "react-icons";
 import {SideNavData} from '../pages/SideNavData.js';
+import Table from 'react-bootstrap/Table';
+import Footer from "components/Footers/Footer.js";
 
-export default function Profile() {
-    const [openTab, setOpenTab] = React.useState(1);
 
+export default function MainRef() {
+ 
  
   return (
-    <>
+    <div>
     <IndexNavbar></IndexNavbar>
+    <div className="flex flex-wrap">
+    <div className="w-full px-4 flex-1">
+      <span className="text-sm block my-4 p-3 text-gray-800 rounded border border-solid border-gray-200">
+      <img
+                          src="https://scontent.ftun4-1.fna.fbcdn.net/v/t1.15752-9/127834716_3838891042802187_4248109063710886219_n.png?_nc_cat=102&ccb=2&_nc_sid=ae9488&_nc_ohc=L2u9KjFxE0sAX_NEfGW&_nc_oc=AQlvf9ww9AixQ8ZSsN9paroBnVYLfA1C3cbxXGs9keOib9DkdZjgVMKS2WM0wWmgHp8&_nc_ht=scontent.ftun4-1.fna&oh=a871f1c7e476418fba9d69a03d68873b&oe=5FE7186A"
+                          alt="..."
+                       
+                        />
+      </span>
+    </div>
+    <div className="w-full px-4 flex-1">
+     
+    </div>
+  </div>
+    <div className="flex flex-wrap">
+    <div className="w-full px-4 flex-1">
+     
+    </div>
     
-       <div className="flex flex-wrap">
-        <div className="w-full">
-          <ul
-            className="flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row"
-            role="tablist"
-          >
-            <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
-              <a
-                className={
-                  "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
-                  (openTab === 1
-                    ? "text-black bg-gray-600"
-                    : "text-gray-600 bg-white")
-                }
-                onClick={e => {
-                  e.preventDefault();
-                  setOpenTab(1);
-                }}
-                data-toggle="tab"
-                href="#link1"
-                role="tablist"
-              >
-              Refrences
-              </a>
-            </li>
-            
-            <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
-              <a
-                className={
-                  "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
-                  (openTab === 3
-                    ? "text-black bg-gray-600"
-                    : "text-gray-600 bg-white")
-                }
-                onClick={e => {
-                  e.preventDefault();
-                  setOpenTab(3);
-                }}
-                data-toggle="tab"
-                href="#link3"
-                role="tablist"
-              >
-                Download
-              </a>
-            </li>
-          </ul>
-          <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
-            <div className="px-4 py-5 flex-auto">
-              <div className="tab-content tab-space">
-                <div className={openTab === 1 ? "block" : "hidden"} id="link1">
-                  <p>
-                    Collaboratively administrate empowered markets via
-                    plug-and-play networks. Dynamically procrastinate B2C users
-                    after installed base benefits.
-                    <br />
-                    <br /> Dramatically visualize customer directed convergence
-                    without revolutionary ROI.
-                  </p>
-                </div>
-                <div className={openTab === 2 ? "block" : "hidden"} id="link2">
-                  <p>
-                    Completely synergize resource taxing relationships via
-                    premier niche markets. Professionally cultivate one-to-one
-                    customer service with robust ideas.
-                    <br />
-                    <br />
-                    Dynamically innovate resource-leveling customer service for
-                    state of the art customer service.
-                  </p>
-                </div>
-                <div className={openTab === 3 ? "block" : "hidden"} id="link3">
-                  <p>
-                    Efficiently unleash cross-media information without
-                    cross-media value. Quickly maximize timely deliverables for
-                    real-time schemas.
-                    <br />
-                    <br /> Dramatically maintain clicks-and-mortar solutions
-                    without functional solutions.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
+  </div>
+  <div className="w-8/12 px-4">
+      <span className="text-sm block my-4 p-3 text-gray-800 rounded border border-solid border-gray-200">
+      <Table striped bordered hover variant="dark">
+  <thead>
+    <tr>
+      <th>Project ID</th>
+      <th>Clients</th>
+      <th>Nature of the study</th>
+      <th>Project</th>
+      <th>Date</th>
+      <th>Upload as pdf</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>exp</td>
+      <td>exp</td>
+      <td>exp</td>
+      <td>exp</td>
+      <td>
+          <i className="fas fa-upload"></i>
+    </td>
+    </tr>
+    
+  </tbody>
+</Table>
+      </span>
+    </div>
+    
+  <div >
    
-
-    </>
+  </div>
+  <br/><br/>
+  <Footer/>
+    </div>
   );
 }

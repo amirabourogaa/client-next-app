@@ -126,7 +126,7 @@ export default function Index() {
                     <div className="flex flex-wrap ">
                       <div className="w-6/12 sm:w-4/12 px-4">
                         <img
-                          src="https://demos.creative-tim.com/tailwindcss-starter-project/_next/static/images/team-3-800x800-19201574ed51f77138a739c0452ca104.jpg"
+                          src="https://scontent.ftun4-1.fna.fbcdn.net/v/t1.15752-9/127711876_293778051990141_2103523223988843810_n.jpg?_nc_cat=100&ccb=2&_nc_sid=ae9488&_nc_ohc=OFXTxCsuBjwAX90TfJO&_nc_ht=scontent.ftun4-1.fna&oh=4a8be717bdbe809fd2280cc44ce7b2ce&oe=5FE75728"
                           alt="..."
                         />
                       </div>
@@ -149,7 +149,7 @@ export default function Index() {
                     <div className="flex flex-wrap ">
                       <div className="w-6/12 sm:w-4/12 px-4">
                         <img
-                          src="https://demos.creative-tim.com/tailwindcss-starter-project/_next/static/images/team-3-800x800-19201574ed51f77138a739c0452ca104.jpg"
+                          src="https://freepikpsd.com/wp-content/uploads/2019/10/add-photo-icon-png-6-Transparent-Images.png"
                           alt="..."
                         />
                       </div>
@@ -171,7 +171,7 @@ export default function Index() {
                     <div className="flex flex-wrap ">
                       <div className="w-6/12 sm:w-4/12 px-4">
                         <img
-                          src="https://demos.creative-tim.com/tailwindcss-starter-project/_next/static/images/team-3-800x800-19201574ed51f77138a739c0452ca104.jpg"
+                          src="https://freepikpsd.com/wp-content/uploads/2019/10/add-photo-icon-png-6-Transparent-Images.png"
                           alt="..."
                         />
                       </div>
@@ -197,7 +197,7 @@ export default function Index() {
                     <div className="flex flex-wrap ">
                       <div className="w-6/12 sm:w-4/12 px-4">
                         <img
-                          src="https://demos.creative-tim.com/tailwindcss-starter-project/_next/static/images/team-3-800x800-19201574ed51f77138a739c0452ca104.jpg"
+                          src="https://freepikpsd.com/wp-content/uploads/2019/10/add-photo-icon-png-6-Transparent-Images.png"
                           alt="..."
                         />
                       </div>
@@ -219,7 +219,7 @@ export default function Index() {
                     <div className="flex flex-wrap ">
                       <div className="w-6/12 sm:w-4/12 px-4">
                         <img
-                          src="https://demos.creative-tim.com/tailwindcss-starter-project/_next/static/images/team-3-800x800-19201574ed51f77138a739c0452ca104.jpg"
+                          src="https://freepikpsd.com/wp-content/uploads/2019/10/add-photo-icon-png-6-Transparent-Images.png"
                           alt="..."
                         />
                       </div>
@@ -241,7 +241,7 @@ export default function Index() {
                     <div className="flex flex-wrap ">
                       <div className="w-6/12 sm:w-4/12 px-4">
                         <img
-                          src="https://demos.creative-tim.com/tailwindcss-starter-project/_next/static/images/team-3-800x800-19201574ed51f77138a739c0452ca104.jpg"
+                          src="https://freepikpsd.com/wp-content/uploads/2019/10/add-photo-icon-png-6-Transparent-Images.png"
                           alt="..."
                        
                         />
@@ -390,6 +390,7 @@ export default function Index() {
         <style jsx>{`
           #marg {
             margin-left: 100px;
+            height: 500px
           }
           #marg1 {
             margin-left: 250px;
@@ -413,6 +414,7 @@ export default function Index() {
                         Login Page
                       </h5>
                       <img
+                     
                         alt="..."
                         className="align-middle border-none  h-auto rounded-lg"
                         src={require("assets/img/login.jpg")}
@@ -431,7 +433,7 @@ export default function Index() {
                       <img
                         alt="..."
                         className="align-middle border-none max-w-full h-auto rounded-lg"
-                        src={require("assets/img/landing.jpg")}
+                        src={require("assets/img/landing1.jpg")}
                       />
                     </div>
                   </Link>
@@ -479,25 +481,29 @@ export default function Index() {
                       <tr >
                         <td>
                           
-  <div style={{backgroundColor:'whitesmoke', marginRight:'100px',width:'200px'}} class="card mb-3">
+  <div style={{backgroundColor:'whitesmoke', marginRight:'100px',width:'200px',height:'250px'}} className="card mb-3">
     <br></br>
   <h1 >MPS</h1>
  <br></br>
  
-    
+ 
                     <div className="flex flex-wrap ">
                       <div>
+                       
                         <img
                          
                           src="http://www.mpscompany.net/assets/images/logo2.png"
                           className="  border-none"
+                         
                         />
+                       
                       </div>
                     </div>
+                
                   
-                  <div class="card-body">
+                  <div className="card-body">
 
-    <a href="http://www.mpscompany.net/" class="card-link">Visit the website</a>
+    <a href="http://www.mpscompany.net/" className="card-link">Visit the website</a>
     
   </div>
   
@@ -507,30 +513,31 @@ export default function Index() {
                         <td> 
                         
   
-  <div style={{backgroundColor:'whitesmoke', marginRight:'100px'}} class="card mb-3">
+  <div style={{backgroundColor:'whitesmoke', marginRight:'100px',width:'200px',height:'250px'}}  className="card mb-3">
     <br></br>
-  <h1 class="card-header">GEO-ARCH-net</h1>
+  <h1>GEO-ARCH-net</h1>
  <br></br>
  
                     <div className="flex flex-wrap ">
                       <div >
                         <img
-                         
+                          style={{marginLeft:'35px'}}
                           src="https://www.geo-arch.net/____impro/1/onewebmedia/geoArch.logo%20petit%202.png?etag=%2225cf-5a1d7ce6%22&sourceContentType=image%2Fpng"
                           alt="..."
-                          className="  border-none"
+                         
                         />
                       </div>
                     </div>
-                  <a href="https://www.geo-arch.net/" class="card-link">Visit the website</a>
+                   
+                  <a href="https://www.geo-arch.net/" className="card-link">Visit the website</a>
   
 </div>
                        
                         </td>
                         <td>
-                        <div style={{backgroundColor:'whitesmoke'}}  class="card mb-3">
+                        <div style={{backgroundColor:'whitesmoke', marginRight:'100px',width:'200px',height:'250px'}}   className="card mb-3">
     <br></br>
-  <h1 class="card-header">Envicontrol</h1>
+  <h1 >Envicontrol</h1>
  <br></br>
                     <div className="flex flex-wrap ">
                       <div>
@@ -543,7 +550,8 @@ export default function Index() {
                        
                       </div>
                     </div>
-                  <a href="https://www.envicontrol.com/" class="card-link">Visit the website</a>
+                    <br/><br/><br/>
+                  <a href="https://www.envicontrol.com/" className="card-link">Visit the website</a>
 </div>
                      
                         </td>
@@ -553,9 +561,8 @@ export default function Index() {
                         </table>
                         <style jsx>{`
          img {
-           width : 300px ;
-           height : 200px;
-          padding: 50px;
+          
+          padding: 20px;
            margin-right : 100px;
          }
         
@@ -568,9 +575,10 @@ export default function Index() {
           </div>
         </div>
       </section> 
+    
       <br></br><br></br><br></br><br></br>
       <Footer />
-      <div></div>
+      
     </>
   );
 }

@@ -3,6 +3,7 @@ import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import { UncontrolledCarousel, Row} from "reactstrap";
 import "bootswatch/dist/slate/bootstrap.min.css";
 import "react-slideshow-image/dist/styles.css";
+import Footer from "components/Footers/Footer.js";
 
 import "react-slideshow-image/dist/styles.css";
 
@@ -238,7 +239,9 @@ const Tabs = () => {
             </span>
           </div>
         </Row>
+      
       </div>
+      <Footer/>
     </>
   );
 };

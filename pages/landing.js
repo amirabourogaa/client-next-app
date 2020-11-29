@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import axios from "axios";
 // components
+import IndexNavbar from "components/Navbars/IndexNavbar.js";
 
 import Navbar from "components/Navbars/AuthNavbar.js";
 
@@ -21,7 +22,7 @@ export default function Landing() {
   };
   return (
     <>
-      <Navbar transparent />
+      <IndexNavbar  />
       <main>
         <div className="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
           <div
@@ -61,13 +62,13 @@ export default function Landing() {
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap">
               <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
-                <div id='transparent' className="relative flex flex-col min-w-0 break-words bg-black  w-full mb-8 shadow-lg rounded-lg">
+                <div id='transparent' className="relative flex flex-col min-w-0 break-words bg-white  w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-4 py-5 flex-auto">
-                    <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
+                    <div className="text-black p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
                       <i className="fas fa-award"></i>
                     </div>
-                    <h6 className="text-xl text-black font-semibold">Our Agency</h6>
-                    <p className="mt-2 mb-4 text-white">
+                    <h6 className="text-xl  font-semibold">Our Agency</h6>
+                    <p className="mt-2 mb-4 text-grey-200">
                       IRADA Consulting is a leading consulting company founded
                       by a group of highly qualified multidisciplinary experts,
                       with many years of experience in the field of engineering
@@ -76,11 +77,7 @@ export default function Landing() {
                   </div>
                 </div>
               </div>
-              <style jsx>{`
-        #transparent {
-              --bg-opacity : 0.4;
-        }
-      `}</style>
+             
               <div className="w-full md:w-4/12 px-4 text-center">
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-4 py-5 flex-auto">
@@ -125,15 +122,10 @@ export default function Landing() {
                   Working with us is a pleasure
                 </h3>
                 <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
-                  Don't let your uses guess by attaching tooltips and popoves to
-                  any element. Just make sure you enable them first via
-                  JavaScript.
+                 
                 </p>
                 <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700">
-                  The kit comes with three pre-built pages to help you get
-                  started faster. You can change the text and images and you're
-                  good to go. Just make sure you enable them first via
-                  JavaScript.
+                
                 </p>
                 
               </div>
@@ -157,14 +149,10 @@ export default function Landing() {
                         className="text-gray-800 fill-current"
                       ></polygon>
                     </svg>
-                    <h4 className="text-xl font-bold text-white">
-                      Top Notch Services
+                    <h4 className="text-xl font-bold text-red-600">
+                      welcome to IRADA consulting
                     </h4>
-                    <p className="text-md font-light mt-2 text-white">
-                      The Arctic Ocean freezes every winter and much of the
-                      sea-ice then thaws every summer, and that process will
-                      continue whatever happens.
-                    </p>
+                    
                   </blockquote>
                 </div>
               </div>
@@ -178,9 +166,7 @@ export default function Landing() {
               <div className="w-full lg:w-6/12 px-4">
                 <h2 className="text-4xl font-semibold">Here are our heroes</h2>
                 <p className="text-lg leading-relaxed m-4 text-gray-600">
-                  According to the National Oceanic and Atmospheric
-                  Administration, Ted, Scambos, NSIDClead scentist, puts the
-                  potentially record maximum.
+                 
                 </p>
               </div>
             </div>
@@ -190,7 +176,7 @@ export default function Landing() {
                   <img
                     alt="..."
                     src={
-                      "https://scontent.ftun4-1.fna.fbcdn.net/v/t1.0-9/80823449_3338562766170870_1331260555465326592_o.jpg?_nc_cat=107&ccb=2&_nc_sid=19026a&_nc_ohc=7DaD5bE7DtIAX-KMtwp&_nc_ht=scontent.ftun4-1.fna&oh=b7601aa902c09b74a41f036709ce7e5f&oe=5FDA269D"
+                      "https://upload.wikimedia.org/wikipedia/en/e/ee/Unknown-person.gif"
                     }
                     className="shadow-lg rounded-full mx-auto max-w-120-px"
                   />
@@ -217,7 +203,7 @@ export default function Landing() {
                   <img
                     alt="..."
                     src={
-                      "https://scontent.ftun4-1.fna.fbcdn.net/v/t1.0-9/100040834_687144818788439_3019397313719173120_n.jpg?_nc_cat=101&ccb=2&_nc_sid=8bfeb9&_nc_ohc=JZoLHVfFyxIAX_BziRP&_nc_ht=scontent.ftun4-1.fna&oh=35b91c27071f8d6ba15813fda0b75176&oe=5FD8161C"
+                      "https://scontent.ftun4-1.fna.fbcdn.net/v/t1.0-9/46472568_307166516786273_1584723210010624000_o.jpg?_nc_cat=111&ccb=2&_nc_sid=174925&_nc_ohc=5v7YODAlyigAX8ZnMxC&_nc_ht=scontent.ftun4-1.fna&oh=a4276cc03a02d3bbcbf65dc7c545c0a6&oe=5FE76D8F"
                     }
                     className="shadow-lg rounded-full mx-auto max-w-120-px"
                   />
@@ -243,33 +229,24 @@ export default function Landing() {
                 <div className="px-6">
                   <img
                     alt="..."
-                    src={require("assets/img/team-3-800x800.jpg")}
+                    src={"https://scontent.ftun4-1.fna.fbcdn.net/v/t1.0-9/118214625_337853037583319_1779048938222223605_o.jpg?_nc_cat=100&ccb=2&_nc_sid=09cbfe&_nc_ohc=Abz6nDoN8IUAX8xk5na&_nc_ht=scontent.ftun4-1.fna&oh=068e8f008d3c98a2aa3e784f1235a6ec&oe=5FE94693"}
                     className="shadow-lg rounded-full mx-auto max-w-120-px"
                   />
                   <div className="pt-6 text-center">
-                    <h5 className="text-xl font-bold">Alexa Smith</h5>
+                    <h5 className="text-xl font-bold">Nahedh Abbes</h5>
                     <p className="mt-1 text-sm text-gray-500 uppercase font-semibold">
-                      UI/UX Designer
+                     Web Developer
                     </p>
                     <div className="mt-6">
+                      
+                     <a  href="https://www.facebook.com/nahedh.abbes.5">
                       <button
-                        className="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                        className="bg-blue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                         type="button"
                       >
-                        <i className="fab fa-google"></i>
+                        <i className="fab fa-facebook-f"></i>
                       </button>
-                      <button
-                        className="bg-blue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-twitter"></i>
-                      </button>
-                      <button
-                        className="bg-gray-800 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-instagram"></i>
-                      </button>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -278,39 +255,24 @@ export default function Landing() {
                 <div className="px-6">
                   <img
                     alt="..."
-                    src={require("assets/img/team-4-470x470.png")}
+                    src={"https://scontent.ftun4-1.fna.fbcdn.net/v/t1.0-9/68958559_10162294546425038_2495917860639997952_n.jpg?_nc_cat=100&ccb=2&_nc_sid=09cbfe&_nc_ohc=5r9WGKKhUnoAX-d5f4U&_nc_ht=scontent.ftun4-1.fna&oh=494c031605b6d68e1ee1ed21a5e28959&oe=5FE79855"}
                     className="shadow-lg rounded-full mx-auto max-w-120-px"
                   />
                   <div className="pt-6 text-center">
-                    <h5 className="text-xl font-bold">Jenna Kardi</h5>
+                    <h5 className="text-xl font-bold">Issam Ben Mansour</h5>
                     <p className="mt-1 text-sm text-gray-500 uppercase font-semibold">
-                      Founder and CEO
+                      Web Developer
                     </p>
                     <div className="mt-6">
+                     <a href='https://www.facebook.com/Issam.Ben.mansour'>
                       <button
-                        className="bg-pink-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                        className="bg-blue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                         type="button"
                       >
-                        <i className="fab fa-dribbble"></i>
+                        <i className="fab fa-facebook-f"></i>
                       </button>
-                      <button
-                        className="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-google"></i>
-                      </button>
-                      <button
-                        className="bg-blue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-twitter"></i>
-                      </button>
-                      <button
-                        className="bg-gray-800 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-instagram"></i>
-                      </button>
+                      </a>
+                     
                     </div>
                   </div>
                 </div>

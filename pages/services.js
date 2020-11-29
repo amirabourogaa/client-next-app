@@ -1,12 +1,11 @@
 import React, { Fragment, useEffect } from "react";
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
-import { UncontrolledCarousel, Row, Col, Button } from "reactstrap";
+import { UncontrolledCarousel, Row} from "reactstrap";
 import "bootswatch/dist/slate/bootstrap.min.css";
 import "react-slideshow-image/dist/styles.css";
-import { Zoom } from "react-slideshow-image";
+import Footer from "components/Footers/Footer.js";
+
 import "react-slideshow-image/dist/styles.css";
-import $ from 'jquery'
-import Carousel from "react-material-ui-carousel";
 
 
 const Tabs = () => {
@@ -14,21 +13,21 @@ const Tabs = () => {
 
   const items = [
     {
-      src: require("assets/img/naturee.jpg"),
+      src: require("assets/img/irada.jpg"),
       altText: "Slide 1",
       caption: "",
       header: "",
       key: "1",
     },
     {
-      src: require("assets/img/naturee2.jpg"),
+      src: require("assets/img/irada1.jpg"),
       altText: "Slide 2",
       caption: "",
       header: "",
       key: "2",
     },
     {
-      src: require("assets/img/sunEnergy.jpg"),
+      src: require("assets/img/irada2.jpg"),
       altText: "Slide 3",
       caption: "",
       header: "",
@@ -42,7 +41,7 @@ const Tabs = () => {
     <>
       <IndexNavbar fixed />
       
-
+    
       
 
 
@@ -101,7 +100,7 @@ const Tabs = () => {
 
                 <div
                   className="card-footer "
-                  style={{ backgroundColor: "black" }}>
+                  style={{ backgroundColor: "white" }}>
                   <div className="card">
                     <div className="card-body">
                       <h4 className="card-title text-xl">Description </h4>
@@ -143,7 +142,7 @@ const Tabs = () => {
 
                 <div
                   className="card-footer "
-                  style={{ backgroundColor: "black" }}>
+                  style={{ backgroundColor: "white" }}>
                   <div className="card">
                     <div className="card-body ">
                       <h4 className="card-title text-xl">Description </h4>
@@ -181,7 +180,7 @@ const Tabs = () => {
 
                 <div
                   className="card-footer   style = {{backgroundColor :'black'}}"
-                  style={{ backgroundColor: "black" }}>
+                  style={{ backgroundColor: "white" }}>
                   <div className="card">
                     <div className="card-body">
                       <h4 className="card-title text-xl">Description </h4>
@@ -222,7 +221,7 @@ const Tabs = () => {
 
                 <div
                   className="card-footer "
-                  style={{ backgroundColor: "black" }}>
+                  style={{ backgroundColor: "white" }}>
                   <div className="card">
                     <div className="card-body">
                       <h4 className="card-title text-xl">Description </h4>
@@ -240,7 +239,9 @@ const Tabs = () => {
             </span>
           </div>
         </Row>
+      
       </div>
+      <Footer/>
     </>
   );
 };

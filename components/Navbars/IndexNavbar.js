@@ -45,17 +45,24 @@ export default function Navbar(props) {
         </a>
       </li>
       <li className="nav-item">
+        <a className="nav-link" href=" /profile">Partners</a>
+      </li>
+      <li className="nav-item">
+        <a className="nav-link" href="/services">Services</a>
+      </li>
+      <li className="nav-item">
+        <a className="nav-link" href="/about">About us</a>
+      </li>
+      <li className="nav-item">
+        <a className="nav-link" href="/mainRef">Main Refrences</a>
+      </li>
+
+      <li className="nav-item">
         <a className="nav-link" href="/landing">Contact us</a>
       </li>
-      <li className="nav-item">
-        <a className="nav-link" href="/modal">Services</a>
-      </li>
-      <li className="nav-item">
-        <a className="nav-link" href="">About</a>
-      </li>
-      <li className="nav-item">
-        <a className="nav-link" href="#partners">Partners</a>
-      </li>
+     
+     
+      
     </ul>
     
   </div>

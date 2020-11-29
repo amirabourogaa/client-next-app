@@ -5,9 +5,7 @@ import "bootswatch/dist/Cerulean/bootstrap.min.css";
 import { UncontrolledCarousel, Row, Col } from "reactstrap";
 import NavbarLoggedIn from "components/Navbars/NavbarLoggedIn.js";
 import Footer from "components/Footers/Footer.js";
-import Modal from "./modal.js";
-import Carousel from "react-bootstrap/Carousel";
-//import Image from 'next/image'
+
 
 import { left } from "@popperjs/core";
 

@@ -58,7 +58,7 @@ const MapExampleScript = withScriptjs(
         ],
       }}
     >
-      <Marker position={{ lat: 40.748817, lng: -73.985428 }} />
+      <Marker position={{ lat:10.1812451 , lng:36.8462632  }} />
     </GoogleMap>
   ))
 );
@@ -66,7 +66,7 @@ const MapExampleScript = withScriptjs(
 function MapExample() {
   return (
     <MapExampleScript
-      googleMapURL="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"
+      googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeGVs2-huRD24Jcrftsxu_2khOnc5pyIM"
       loadingElement={<div className="h-full" />}
       containerElement={<div className="relative w-full rounded h-600-px" />}
       mapElement={<div className="rounded h-full" />}

@@ -1,32 +1,12 @@
-import React, {useState,useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import axios from 'axios';
+import axios from "axios";
 // layout for page
+import cookie from "js-cookie";
 
 import Auth from "layouts/Auth.js";
 
-
 export default function Login() {
-
-  const submit = (e) => {
-    e.preventDefault();
-    let obj = {};
-    obj.email = document.getElementById("email").value;
-    obj.password = document.getElementById("password").value;
-
-    
-    localStorage.setItem('token',obj.email)
-    axios.post("https://server-cunsulting.herokuapp.com/Client/login", obj).then((res) => {
-    if (res.data!==undefined){
-      localStorage.setItem('token',res.data)
-    }else{
-      localStorage.clear()
-    }
-    
-    }); 
-    e.preventDefault(); 
-  };
-
   return (
     <>
       <div className="container mx-auto px-4 h-full">
@@ -35,16 +15,13 @@ export default function Login() {
             <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300 border-0">
               <div className="rounded-t mb-0 px-6 py-6">
                 <div className="text-center mb-3">
-                  <h6 className="text-gray-600 text-sm font-bold">
-                   Login
-                  </h6>
+                  <h6 className="text-gray-600 text-sm font-bold">Login</h6>
                 </div>
-               
+
                 <hr className="mt-6 border-b-1 border-gray-400" />
               </div>
               <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
-               
-                <form onSubmit={submit}>
+                <form>
                   <div className="relative w-full mb-3">
                     <label
                       className="block uppercase text-gray-700 text-xs font-bold mb-2"
@@ -53,7 +30,7 @@ export default function Login() {
                       Email
                     </label>
                     <input
-                      id='email'
+                      id="email"
                       type="email"
                       className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full ease-linear transition-all duration-150"
                       placeholder="Email"
@@ -68,7 +45,7 @@ export default function Login() {
                       Password
                     </label>
                     <input
-                      id='password'
+                      id="password"
                       type="password"
                       className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full ease-linear transition-all duration-150"
                       placeholder="Password"
@@ -88,13 +65,35 @@ export default function Login() {
                   </div>
 
                   <div className="text-center mt-6">
-                  <Link href="/home">
-                    <button
-                      className="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
-                      type="submit"
-                    >
-                      Sign In
-                    </button>
+                    <Link href="/home">
+                      <button
+                        className="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
+                        onClick={(e) => {
+                          let obj = {};
+                          obj.email = document.getElementById("email").value;
+                          obj.password = document.getElementById(
+                            "password"
+                          ).value;
+
+                          localStorage.setItem("email ", obj.email);
+                          axios
+                            .post(
+                              "https://server-cunsulting.herokuapp.com/Client/login",
+                              obj
+                            )
+                            .then(async (res) => {
+                              if (res.data !== undefined) {
+                                await cookie.set("token", res.data, {
+                                  expires: 2,
+                                });
+                              } else {
+                                localStorage.clear();
+                              }
+                            });
+                        }}
+                      >
+                        Sign In
+                      </button>
                     </Link>
                   </div>
                 </form>
@@ -110,7 +109,6 @@ export default function Login() {
                   <small>Forgot password?</small>
                 </a>
               </div>
-              
             </div>
           </div>
         </div>

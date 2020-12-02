@@ -55,7 +55,7 @@ export default function Navbar(props) {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href=" /profile">
+              <a className="nav-link" href=" #partners">
                 Partners
               </a>
             </li>

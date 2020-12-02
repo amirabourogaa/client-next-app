@@ -71,12 +71,12 @@ export default function Index() {
       <IndexNavbar fixed />
     
       <section
-      
-        className="header relative pt-16 items-center flex h-screen bg-white max-h-860-px">
-        <Row>
+     
+        >
+        <Row style={{marginTop:'100px',marginBottom:'100px'}}>
           <Col>
-            <div className="container mx-auto items-center flex flex-wrap">
-              <div className="w-full md:w-9/12 lg:w-6/12 xl:w-8/12 px-6">
+            <div >
+              <div className="w-full  l:w-8/12 px-6">
                 <div>
                   <img
                     style={{ width: "200px", height: "200px" }}
@@ -84,8 +84,8 @@ export default function Index() {
                     alt="..."
                   />
 
-                  <br></br>
-                  <p className=" text-xl leading-relaxed text-gray-600">
+                  
+                  <p className=" text-xl leading-relaxed text-black">
                     Is a private engineering and consulting firm founded by a
                     high qualified and experienced team. We are a Project and
                     Business Development Company. IRADA Consulting has a
@@ -101,18 +101,19 @@ export default function Index() {
           </Col>
 
           <Col md="6">
-            <br></br>
+           
             <UncontrolledCarousel items={items} />
           </Col>
         </Row>
       </section>
-
+      
       <section className="   bg-gray-200  ">
-        <h3 className="text-4xl font-normal  ml-4  mb-2 text-blue-800">
-          &nbsp;
+        
+        <h2 style={{color:'#1B019B'}}  className="text-3xl font-normal  ml-4 mb-2 ">
+          
           <i className="fas fa-chalkboard-teacher"></i>
           &nbsp; Team members
-        </h3>
+        </h2>
         <br></br>
         <br></br>
         <br></br>
@@ -404,7 +405,7 @@ export default function Index() {
 
         <div className="container px-4 mx-auto">
           <div className="flex flex-wrap ">
-            <div className="w-full px-4  -mt-24 w-full px-4 flex-1">
+            <div className="w-full px-4   w-full px-4 flex-1">
               <div className="flex flex-wrap">
                 <div className="w-full lg:w-4/12 px-4" id="marg">
                   <Link href="/auth/login">
@@ -473,7 +474,7 @@ export default function Index() {
             <div className="w-full text-center lg:w-8/12">
               <p className="text-4xl text-center"></p>
               <h3 className="font-semibold text-3xl">Our Partners</h3>
-              <br></br><br></br><br></br><br></br>
+              <br></br><br></br><br></br>
               
               <table >
                     <thead></thead>
@@ -565,7 +566,7 @@ export default function Index() {
           padding: 20px;
            margin-right : 100px;
          }
-        
+          
         `}</style>
 
     <br></br><br></br> <br></br> <br></br>    

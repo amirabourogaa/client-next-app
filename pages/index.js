@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import "bootswatch/dist/slate/bootstrap.min.css";
-import "bootswatch/dist/Cerulean/bootstrap.min.css";
 import { UncontrolledCarousel, Row, Col } from "reactstrap";
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import Footer from "components/Footers/Footer.js";

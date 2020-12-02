@@ -3,6 +3,7 @@ import Link from "next/link";
 import { createPopper } from '@popperjs/core';
 // components
 import "bootswatch/dist/slate/bootstrap.min.css";
+import "bootswatch/dist/Cerulean/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 

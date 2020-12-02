@@ -3,7 +3,7 @@
     ".next/cache"
   ],
   "engines": {
-    "node": "14.13.0"
+    "node": ">=8.0.0 <11.0.0"
   },
   "name": "client-next-app",
   "homepage": "https://demos.creative-tim.com/notus-nextjs",
@@ -49,6 +49,7 @@
     "react-slideshow-image": "^3.3.2",
     "reactstrap": "^8.7.1",
     "styled-components": "^5.2.1",
+    "sweetalert2": "^10.11.0",
     "tailwindcss": "^1.8.10",
     "webpack": "4.44.2"
   },

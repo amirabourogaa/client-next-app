@@ -503,7 +503,7 @@ export default function Index() {
                   
                   <div className="card-body">
 
-    <a href="http://www.mpscompany.net/" className="card-link">Visit the website</a>
+    <a href="http://www.mpscompany.net/" target="_blank" className="card-link">Visit the website</a>
     
   </div>
   
@@ -529,7 +529,7 @@ export default function Index() {
                       </div>
                     </div>
                    
-                  <a href="https://www.geo-arch.net/" className="card-link">Visit the website</a>
+                  <a href="https://www.geo-arch.net/" target="_blank" className="card-link">Visit the website</a>
   
 </div>
                        
@@ -551,7 +551,7 @@ export default function Index() {
                       </div>
                     </div>
                     <br/><br/><br/>
-                  <a href="https://www.envicontrol.com/" className="card-link">Visit the website</a>
+                  <a href="https://www.envicontrol.com/" target="_blank" className="card-link">Visit the website</a>
 </div>
                      
                         </td>

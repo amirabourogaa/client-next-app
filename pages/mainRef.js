@@ -11,10 +11,13 @@ export default function MainRef() {
   axios
     .get("https://server-cunsulting.herokuapp.com/References")
     .then((res) => {
-      if (MainRef.length !== res.data && res.data > 0) {
-        setState([MainRef, res.data]);
-        console.log(res.data);
-        console.log("hey");
+      console.log(MainRef);
+      if (res.data.length > 0) {
+        if (MainRef[0] === undefined) {
+          setState([MainRef, res.data]);
+          console.log(MainRef);
+          console.log("hey");
+        }
       }
     });
   return (
@@ -48,20 +51,27 @@ export default function MainRef() {
               </tr>
             </thead>
             <tbody>
-              {MainRef.map((elements) => {
-                <tr>
-                  <td>{elements.id}</td>
-                  <td>{elements.Clients}</td>
-                  <td>{elements.Natureofthestudy}</td>
-                  <td>{elements.project}</td>
-                  <td>{elements.date}</td>
-                  <td>
-                    <a href={elements.url}>
-                      <i className="fas fa-upload"></i>
-                    </a>
-                  </td>
-                </tr>;
-              })}
+              {console.log(MainRef, "yooooo")}
+              {MainRef[1] !== undefined ? (
+                MainRef[1].map((elements) => {
+                  return (
+                    <tr>
+                      <td>{elements.id}</td>
+                      <td>{elements.Clients}</td>
+                      <td>{elements.Natureofthestudy}</td>
+                      <td>{elements.project}</td>
+                      <td>{elements.date}</td>
+                      <td>
+                        <a href={elements.url}>
+                          <i className="fas fa-upload"></i>
+                        </a>
+                      </td>
+                    </tr>
+                  );
+                })
+              ) : (
+                <></>
+              )}
             </tbody>
           </Table>
         </span>

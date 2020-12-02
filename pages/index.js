@@ -5,8 +5,26 @@ import "bootswatch/dist/Cerulean/bootstrap.min.css";
 import { UncontrolledCarousel, Row, Col } from "reactstrap";
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import Footer from "components/Footers/Footer.js";
+import * as serviceWorker from './serviceWorker';
+import {I18nextProvider} from "react-i18next";
+import i18next from "i18next";
+
+import common_fr from "./translations/fr/common.json";
+import common_en from "./translations/en/common.json";
 
 
+i18next.init({
+  interpolation: { escapeValue: false },  // React already does escaping
+  lng: 'en',                              // language to use
+  resources: {
+      en: {
+          common: common_en               // 'common' is our custom namespace
+      },
+      fr: {
+          common: common_fr
+      },
+  },
+});
 
 
 
@@ -69,7 +87,10 @@ export default function Index() {
   return (
     <>
       <IndexNavbar fixed />
-    
+      <React.StrictMode>
+      <I18nextProvider i18n={i18next}>
+
+
       <section
       
         className="header relative pt-16 items-center flex h-screen bg-white max-h-860-px">
@@ -578,7 +599,10 @@ export default function Index() {
     
       <br></br><br></br><br></br><br></br>
       <Footer />
-      
+      </I18nextProvider>
+
+      </React.StrictMode>
     </>
   );
 }
+serviceWorker.unregister();

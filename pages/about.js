@@ -26,7 +26,11 @@ const About = () => {
     </div>
     <div className="w-full px-4 flex-1">
       <span className="text-sm block my-4 p-3 text-gray-800 rounded border border-solid border-gray-200">
-      <MapExampleScript/>
+      <div>
+        <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=immeuble%20zephyr+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+        <a href="https://www.maps.ie/route-planner.htm">
+          Road Trip Planner</a>
+          </div>
       </span>
     </div>
   </div>

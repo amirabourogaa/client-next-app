@@ -50,7 +50,7 @@
     "webpack": "4.44.2"
   },
   "scripts": {
-    "start": "next start -p $PORT",
+    "start": "npm i && next start -p $PORT",
     "heroku post-build": "npm run build",
     "build": "next build",
     "dev": "next dev",

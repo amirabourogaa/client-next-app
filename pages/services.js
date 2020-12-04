@@ -19,7 +19,7 @@ const Tabs = () => {
     
       
 
-
+<center>
       <div className="flex flex-wrap">
       
 
@@ -52,7 +52,7 @@ const Tabs = () => {
           </span>
         </div>
       </div>
-
+      </center>
       <div className="flex flex-wrap">
         <Row>
           <div className="w-full px-4 flex-1">

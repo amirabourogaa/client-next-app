@@ -3,7 +3,6 @@ import Link from "next/link";
 import axios from "axios";
 // components
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
-import Swal from 'sweetalert2'
 import Navbar from "components/Navbars/AuthNavbar.js";
 
 export default function Landing() {

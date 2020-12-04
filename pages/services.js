@@ -11,32 +11,7 @@ import "react-slideshow-image/dist/styles.css";
 const Tabs = () => {
   
 
-  const items = [
-    {
-      src: require("assets/img/irada.jpg"),
-      altText: "Slide 1",
-      caption: "",
-      header: "",
-      key: "1",
-    },
-    {
-      src: require("assets/img/irada1.jpg"),
-      altText: "Slide 2",
-      caption: "",
-      header: "",
-      key: "2",
-    },
-    {
-      src: require("assets/img/irada2.jpg"),
-      altText: "Slide 3",
-      caption: "",
-      header: "",
-      key: "3",
-    },
-  ];
-
   
-
   return (
     <>
       <IndexNavbar fixed />
@@ -51,7 +26,7 @@ const Tabs = () => {
      
         <div className="w-full px-4 flex-1">
           <span className="text-sm block my-4 p-3 ">
-            <UncontrolledCarousel style={{ height: "100px" }} items={items} />
+            {/* <UncontrolledCarousel style={{ height: "100px" }} items={items} /> */}
           </span>
         </div>
         <div className="w-full px-4 flex-1">

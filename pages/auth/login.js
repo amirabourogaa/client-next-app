@@ -3,7 +3,6 @@ import Link from "next/link";
 import axios from "axios";
 // layout for page
 import cookie from "js-cookie";
-import Swal from 'sweetalert2'
 import Auth from "layouts/Auth.js";
 
 export default function Login() {

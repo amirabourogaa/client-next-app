@@ -3,7 +3,7 @@ import React from "react";
 export default function Footer() {
   return (
     <>
-      <footer className="relative bg-gray-300 pt-8 pb-6">
+      {/* <footer className="relative bg-gray-300 pt-8 pb-6">
         <div
           className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20 h-20"
           style={{ transform: "translateZ(0)" }}
@@ -25,11 +25,29 @@ export default function Footer() {
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap text-center lg:text-left">
             <div className="w-full lg:w-6/12 px-4">
+              <h4 style={{color:'#1B019B'}} className="text-3xl font-semibold">Let's keep in touch!</h4>
               
               <div className="mt-6 lg:mb-0 mb-6">
                
-              <footer fixed class="bg-dark text-light text-center text-md-left">
+                <button
+                  className="bg-white text-blue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                  type="button"
+                >
+                  <i className="fab fa-facebook-square"></i>
+                </button>
+               
+               
+              </div>
+            </div>
+            
+          </div>
+         
+         
+        </div>
+      </footer> */}
+      <footer fixed class="bg-dark text-light text-center text-md-left">
   <div class="container">
+    
     <div class="row pt-4">
       <div class="col-sm-6 col-md-3 pb-4">
         
@@ -49,17 +67,6 @@ export default function Footer() {
     </p>
   </div>
 </footer>
-               
-               
-              </div>
-            </div>
-            
-          </div>
-         
-         
-        </div>
-      </footer>
-     
     </>
   );
 }

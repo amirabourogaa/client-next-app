@@ -21,33 +21,25 @@ const Tabs = () => {
 
 <center>
       <div className="flex flex-wrap">
-      
-
-     
         <div className="w-full px-4 flex-1">
-          <span className="text-sm block my-4 p-3 ">
-            {/* <UncontrolledCarousel style={{ height: "100px" }} items={items} /> */}
-          </span>
-        </div>
-        <div className="w-full px-4 flex-1">
-          <span className="text-sm block my-4 p-3 ">
+          <span className="text-sm block">
             <br></br>
 
             <div
               id="services"
-              className="jumbotron"
+             
               style={{
                 height: "365px",
-                backgroundColor: "black",
+                backgroundColor: "white",
                 color: "white",
                 fontSize: "20px",
               }}>
-              <h1 style={{ fontSize: "50px", color: "	#FFD700" }}>
+              <h1 style={{color:'#1B019B',fontSize:'50px'}}>
                 Our Services{" "}
               </h1>
 
               <hr className="my-4" />
-              <p>IRADA Consulting offers services in different areas</p>
+              <p style={{color:'black'}}>IRADA Consulting offers services in different areas</p>
             </div>
           </span>
         </div>
@@ -57,13 +49,14 @@ const Tabs = () => {
         <Row>
           <div className="w-full px-4 flex-1">
             <span className="text-sm text-black block my-4 p-3 ">
-              <div className="card mb-3">
-                <h3 className="card-header text-xl">
+              <div style={{border:'solid',borderStyle: 'inset'}}>
+                <center>
+                <h1 style={{fontSize:'22px',marginLeft:'20px',marginTop:'20px',color:'#1B019B',fontWeight:'bold'}}>
                   In the field of the environment
-                </h3>
-
+                </h1>
+                </center>
                 <div className="flex flex-wrap justify-center">
-                  <div className="w-6/12 sm:w-4/12 px-4">
+                  <div className="">
                     <img
                       style={{ marginTop: "50px", marginBottom: "50px" }}
                       src="https://i2.wp.com/www.irishcatholic.com/wp-content/uploads/2017/02/environment-1.jpg?fit=520%2C300&ssl=1"
@@ -74,13 +67,13 @@ const Tabs = () => {
                 </div>
 
                 <div
-                  className="card-footer "
+                 
                   style={{ backgroundColor: "white" }}>
-                  <div className="card">
-                    <div className="card-body">
-                      <h4 className="card-title text-xl">Description </h4>
+                  <div>
+                    <div >
+                      <h2 style={{fontSize:'18px',marginLeft:'20px',color:'#1B019B'}} >Description </h2>
 
-                      <p className="card-text text-xl">
+                      <p style={{fontSize:'18px',marginLeft:'20px',marginBottom:'20px'}} >
                         Environmental and Social Impact Studies Depollution
                         studies and Diagnosis of polluted sites. Solid and
                         liquid waste management, treatment and recovery program.
@@ -98,14 +91,15 @@ const Tabs = () => {
             </span>
           </div>
           <div className="w-full px-4 flex-1">
-            <span className="text-sm block my-4 p-3 text-black ">
-              <div className="card mb-3">
-                <h3 className="card-header text-xl">
-                  In the field of industrial security
-                </h3>
-
+            <span className="text-sm text-black block my-4 p-3 ">
+              <div style={{border:'solid',borderStyle: 'inset'}}>
+                <center>
+                <h1 style={{fontSize:'22px',marginLeft:'20px',marginTop:'20px',color:'#1B019B',fontWeight:'bold'}}>
+                In the field of industrial security
+                </h1>
+                </center>
                 <div className="flex flex-wrap justify-center">
-                  <div className="w-6/12 sm:w-4/12 px-4">
+                  <div className="">
                     <img
                       style={{ marginTop: "50px", marginBottom: "50px" }}
                       src="https://izimage.com/wp-content/uploads/2019/12/Plant-Safety-Challenges-Resized-1200x628.png"
@@ -116,14 +110,14 @@ const Tabs = () => {
                 </div>
 
                 <div
-                  className="card-footer "
+                 
                   style={{ backgroundColor: "white" }}>
-                  <div className="card">
-                    <div className="card-body ">
-                      <h4 className="card-title text-xl">Description </h4>
+                  <div>
+                    <div >
+                      <h2 style={{fontSize:'18px',marginLeft:'20px',color:'#1B019B'}} >Description </h2>
 
-                      <p className="card-text text-xl ">
-                        Study of Dangers Fire Safety <br></br>
+                      <p style={{fontSize:'18px',marginLeft:'20px',marginBottom:'20px'}} >
+                      Study of Dangers Fire Safety <br></br>
                         Study Emergency plans <br></br>
                         Supporting customers in setting up safety programs
                       </p>
@@ -133,17 +127,20 @@ const Tabs = () => {
               </div>
             </span>
           </div>
+          
+         
         </Row>
         <Row>
-          <div className="w-full px-4 flex-1">
+        <div className="w-full px-4 flex-1">
             <span className="text-sm text-black block my-4 p-3 ">
-              <div className="card mb-3">
-                <h3 className="card-header text-xl">
-                  In the area of ​​infrastructure
-                </h3>
-
+              <div style={{border:'solid',borderStyle: 'inset'}}>
+                <center>
+                <h1 style={{fontSize:'22px',marginLeft:'20px',marginTop:'20px',color:'#1B019B',fontWeight:'bold'}}>
+                In the area of ​​infrastructure
+                </h1>
+                </center>
                 <div className="flex flex-wrap justify-center">
-                  <div className="w-6/12 sm:w-4/12 px-4">
+                  <div className="">
                     <img
                       style={{ marginTop: "50px", marginBottom: "50px" }}
                       src="https://media.lesechos.com/api/v1/images/view/5da47f6e3e454656ec351248/1280x720/0602054046519-web-tete.jpg"
@@ -154,14 +151,14 @@ const Tabs = () => {
                 </div>
 
                 <div
-                  className="card-footer   style = {{backgroundColor :'black'}}"
+                 
                   style={{ backgroundColor: "white" }}>
-                  <div className="card">
-                    <div className="card-body">
-                      <h4 className="card-title text-xl">Description </h4>
+                  <div>
+                    <div >
+                      <h2 style={{fontSize:'18px',marginLeft:'20px',color:'#1B019B'}} >Description </h2>
 
-                      <p className="card-text text-xl">
-                        APS, APD and preparation of calls for tenders for
+                      <p style={{fontSize:'18px',marginLeft:'20px',marginBottom:'20px'}} >
+                      APS, APD and preparation of calls for tenders for
                         hydraulic works and CES <br></br>
                         development works Design and assistance in setting up
                         industrial and domestic water treatment plants<br></br>
@@ -177,14 +174,15 @@ const Tabs = () => {
             </span>
           </div>
           <div className="w-full px-4 flex-1">
-            <span className="text-sm block my-4 p-3 text-black ">
-              <div className="card mb-3">
-                <h3 className="card-header text-xl">
-                  In the field of training and technical assistance
-                </h3>
-
+            <span className="text-sm text-black block my-4 p-3 ">
+              <div style={{border:'solid',borderStyle: 'inset'}}>
+                <center>
+                <h1 style={{fontSize:'22px',marginLeft:'20px',marginTop:'20px',color:'#1B019B',fontWeight:'bold'}}>
+                In the field of training and technical assistance
+                </h1>
+                </center>
                 <div className="flex flex-wrap justify-center">
-                  <div className="w-6/12 sm:w-4/12 px-4">
+                  <div className="">
                     <img
                       style={{ marginTop: "50px", marginBottom: "50px" }}
                       src="https://www.lcmtlondon.com/wp-content/uploads/2020/04/shutterstock_285147194.jpg"
@@ -195,14 +193,14 @@ const Tabs = () => {
                 </div>
 
                 <div
-                  className="card-footer "
+                 
                   style={{ backgroundColor: "white" }}>
-                  <div className="card">
-                    <div className="card-body">
-                      <h4 className="card-title text-xl">Description </h4>
+                  <div>
+                    <div >
+                      <h2 style={{fontSize:'18px',marginLeft:'20px',color:'#1B019B'}} >Description </h2>
 
-                      <p className="card-text text-xl">
-                        Design of geographic databases Geographic<br></br>
+                      <p style={{fontSize:'18px',marginLeft:'20px',marginBottom:'20px'}} >
+                      Design of geographic databases Geographic<br></br>
                         information system training <br></br>
                         Training in the following areas: The environment,
                         security Hygiene
@@ -213,7 +211,10 @@ const Tabs = () => {
               </div>
             </span>
           </div>
-        </Row>
+          
+       
+         
+                       </Row>
       
       </div>
       <Footer/>

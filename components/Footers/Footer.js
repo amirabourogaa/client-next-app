@@ -49,44 +49,14 @@ export default function Footer() {
   <div class="container">
     <div class="row pt-4">
       <div class="col-sm-6 col-md-3 pb-4">
-        <h4 class="mb-4">
-          Services
-        </h4>
-        <ul class="list-unstyled">
-          <li>
-            <a href="#" class="text-light">Web design</a>
-          </li>
-          <li>
-            <a href="#" class="text-light">Development</a>
-          </li>
-          <li>
-            <a href="#" class="text-light">Hosting</a>
-          </li>
-        </ul>
+        
+       
       </div>
       <div class="col-sm-6 col-md-3 pb-4">
-        <h4 class="mb-4">
-          About
-        </h4>
-        <ul class="list-unstyled">
-          <li>
-            <a href="#" class="text-light">Company</a>
-          </li>
-          <li>
-            <a href="#" class="text-light">Team</a>
-          </li>
-          <li>
-            <a href="#" class="text-light">Careers</a>
-          </li>
-        </ul>
-      </div>
-      <div class="col-md-6 pb-4">
-        <h4 class="mb-4">
-          IRADA Consulting
-        </h4>
+       
         
       </div>
-    </div>
+          </div>
     <div class="col d-flex justify-content-center mb-4">
       <a href="#" class="d-block px-3">
         <img src="https://cdnjs.cloudflare.com/ajax/libs/webicons/2.0.0/webicons/webicon-facebook-m.png" alt="Facebook" /></a><a href="#" class="d-block px-3"><img src="https://cdnjs.cloudflare.com/ajax/libs/webicons/2.0.0/webicons/webicon-twitter-m.png" alt="Twitter" /></a><a href="#" class="d-block px-3"><img src="https://cdnjs.cloudflare.com/ajax/libs/webicons/2.0.0/webicons/webicon-instagram-m.png" alt="Instagram" /></a><a href="#" class="d-block px-3"><img src="https://cdnjs.cloudflare.com/ajax/libs/webicons/2.0.0/webicons/webicon-linkedin-m.png" alt="Linkedin" /></a>

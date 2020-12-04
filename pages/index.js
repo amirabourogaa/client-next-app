@@ -6,7 +6,7 @@ import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import Footer from "components/Footers/Footer.js";
 import Slider from '../pages/logoSlider.js'
 import Example from '../pages/Carousel'
-
+import '../pages/index.css'
 const items = [
   {
     src: require("assets/img/naturee.jpg"),
@@ -65,7 +65,7 @@ export default function Index() {
   return (
     <>
   
-      <IndexNavbar style={{height:'100px'}} />
+      <IndexNavbar  />
       <Example style={{height:'200px'}}/>
       <div className="content" style={{marginLeft:"30px",marginRight:"30px"}}>
       <section>

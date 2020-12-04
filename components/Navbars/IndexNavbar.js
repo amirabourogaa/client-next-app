@@ -1,12 +1,11 @@
 import React, { Component } from "react";
-//import CustomDropdown from "./components/CustomDropdown/CustomDropdown.js";
-//import React from "react";
+
 import { createPopper } from "@popperjs/core";
 // components
-import "bootswatch/dist/slate/bootstrap.min.css";
+import "../../node_modules/bootswatch/dist/slate/bootstrap.min.css";
+import "../../node_modules/bootswatch/dist/Cerulean/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import Link from "next/link";
-import axios from "axios";
+
 import cookie from "js-cookie";
 
 export default function Navbar(props) {
@@ -29,7 +28,7 @@ export default function Navbar(props) {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-black">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a className="navbar-brand" href="#">
           IRADA consulting
         </a>

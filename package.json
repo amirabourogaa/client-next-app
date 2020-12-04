@@ -3,7 +3,7 @@
     ".next/cache"
   ],
   "engines": {
-    "node": "14.13.0"
+    "node": ">=8.0.0 <11.0.0"
   },
   "name": "client-next-app",
   "homepage": "https://demos.creative-tim.com/notus-nextjs",
@@ -53,11 +53,15 @@
     "react-slideshow-image": "^3.3.2",
     "reactstrap": "^8.7.1",
     "styled-components": "^5.2.1",
+<<<<<<< HEAD
+    "tailwindcss": "^1.8.10"
+=======
     "tailwindcss": "^1.8.10",
     "@babel/core": "^7.12.9",
     "@babel/preset-env": "^7.12.7",
     "babel-loader": "^8.2.2",
     "webpack": "^4.44.2"
+>>>>>>> fe31cf2848214cab6f5004de366b1b54ac373b79
   },
   "scripts": {
     "start": " next start -p $PORT",

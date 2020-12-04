@@ -21,7 +21,7 @@ export default function MainRef() {
       }
     });
   return (
-    <div>
+    <div style={{backgroundColor:'#010008'}}>
       <IndexNavbar></IndexNavbar>
       <div className="flex flex-wrap">
         <div className="w-full px-4 flex-1">

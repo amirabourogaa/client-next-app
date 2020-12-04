@@ -53,11 +53,15 @@
     "react-slideshow-image": "^3.3.2",
     "reactstrap": "^8.7.1",
     "styled-components": "^5.2.1",
-    "tailwindcss": "^1.8.10"
+    "tailwindcss": "^1.8.10",
+    "@babel/core": "^7.12.9",
+    "@babel/preset-env": "^7.12.7",
+    "babel-loader": "^8.2.2",
+    "webpack": "^4.44.2"
   },
   "scripts": {
     "start": " next start -p $PORT",
-    "heroku post-build": "npm run build",
+    "heroku post-build": "npm install && npm run build",
     "build": "next build",
     "dev": "next dev",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm run build:tailwind && npm run dev",

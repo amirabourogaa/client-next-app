@@ -3,8 +3,7 @@ import Link from "next/link";
 import axios from "axios";
 // components
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
-import Navbar from "components/Navbars/AuthNavbar.js";
-
+import About from '../pages/about';
 export default function Landing() {
   const submit = (e) => {
     e.preventDefault();
@@ -41,6 +40,7 @@ export default function Landing() {
       <IndexNavbar  />
       <main>
         <div className="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
+     
           <div
             className="absolute top-0 w-full h-full bg-center bg-cover"
             style={{
@@ -48,15 +48,14 @@ export default function Landing() {
                 "url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')",
             }}
           >
-            <span
-              id="blackOverlay"
-              className="w-full h-full absolute opacity-75 bg-black"
-            ></span>
+              
+           
           </div>
           <div
             className="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden h-16"
             style={{ transform: "translateZ(0)" }}
           >
+           
             <svg
               className="absolute bottom-0 overflow-hidden"
               xmlns="http://www.w3.org/2000/svg"
@@ -71,10 +70,12 @@ export default function Landing() {
                 points="2560 0 2560 100 0 100"
               ></polygon>
             </svg>
+            
           </div>
         </div>
-
+       
         <section className="pb-20 bg-gray-300 -mt-24">
+        <About/>
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap">
               <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
@@ -83,7 +84,7 @@ export default function Landing() {
                     <div className="text-black p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
                       <i className="fas fa-award"></i>
                     </div>
-                    <h6 className="text-xl  font-semibold">Our Agency</h6>
+                    <h6 className="text-xl  font-semibold"style={{color:'#1B019B'}}>Our Agency</h6>
                     <p className="mt-2 mb-4 text-grey-200">
                       IRADA Consulting is a leading consulting company founded
                       by a group of highly qualified multidisciplinary experts,
@@ -100,7 +101,7 @@ export default function Landing() {
                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-400">
                       <i className="fas fa-retweet"></i>
                     </div>
-                    <h6 className="text-xl font-semibold">Preview</h6>
+                    <h6 className="text-xl font-semibold"style={{color:'#1B019B'}}>Preview</h6>
                     <p className="mt-2 mb-4 text-gray-600">
                       IRADA Consulting offers a range of services in the fields
                       of Environment, Industrial Safety, Energy and
@@ -119,7 +120,7 @@ export default function Landing() {
                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-green-400">
                       <i className="fas fa-fingerprint"></i>
                     </div>
-                    <h6 className="text-xl font-semibold">Verified Company</h6>
+                    <h6 className="text-xl font-semibold" style={{color:'#1B019B'}}>Verified Company</h6>
                     <p className="mt-2 mb-4 text-gray-600">
                       Write a few lines about each one. A paragraph describing a
                       feature will be enough. Keep you user engaged!
@@ -134,7 +135,7 @@ export default function Landing() {
                 <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-gray-100">
                   <i className="fas fa-user-friends text-xl"></i>
                 </div>
-                <h3 className="text-3xl mb-2 font-semibold leading-normal">
+                <h3 className="text-3xl mb-2 font-semibold leading-normal"style={{color:'#1B019B'}}>
                   Working with us is a pleasure
                 </h3>
                 <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
@@ -165,7 +166,7 @@ export default function Landing() {
                         className="text-gray-800 fill-current"
                       ></polygon>
                     </svg>
-                    <h4 className="text-xl font-bold text-red-600">
+                    <h4 className="text-xl font-bold text-black">
                       welcome to IRADA consulting
                     </h4>
                     
@@ -174,13 +175,14 @@ export default function Landing() {
               </div>
             </div>
           </div>
+
         </section>
 
         <section className="pt-20 pb-48">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap justify-center text-center mb-24">
               <div className="w-full lg:w-6/12 px-4">
-                <h2 className="text-4xl font-semibold">Here are our heroes</h2>
+                <h2 className="text-4xl font-semibold"style={{color:'#1B019B'}}>Here are our heroes</h2>
                 <p className="text-lg leading-relaxed m-4 text-gray-600">
                  
                 </p>
@@ -335,7 +337,9 @@ export default function Landing() {
                 </p>
               </div>
             </div>
+           
           </div>
+         
         </section>
         <section className="relative block py-24 lg:pt-0 bg-gray-900">
           <div className="container mx-auto px-4">
@@ -428,6 +432,7 @@ export default function Landing() {
             </div>
           </div>
         </section>
+        
       </main>
     </>
   );

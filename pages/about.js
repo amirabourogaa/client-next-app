@@ -10,12 +10,12 @@ const About = () => {
   return (
     <>
      <div  >
-       <IndexNavbar/>
+       {/* <IndexNavbar/> */}
        <div  >
     <div >
       <center>
       <div style={{fontSize:'22px',marginTop:'100px',width:'500px'}}>
-      <h1 style={{fontSize:'30px',color:'gold',fontWeight:'bold'}}>Contact</h1><br/>
+      <h1 style={{fontSize:'30px',color:'#1B019B',fontWeight:'bold'}}>Contact</h1><br/>
        
         <p> <span>Adresse:</span> 10 Avenue Habib Bourguiba, <br/>
           Imm. Zaphyr B3-1 – Ariana 2080<br/>
@@ -41,7 +41,7 @@ const About = () => {
         
  </div>
  <br/><br/>
-<Footer/>
+{/* <Footer/> */}
     </>
   );
 };

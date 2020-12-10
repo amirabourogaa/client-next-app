@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Link from "next/link";
-// import "bootswatch/dist/slate/bootstrap.min.css";
 import { Container, Row, Jumbotron } from "reactstrap";
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import Footer from "components/Footers/Footer.js";
@@ -9,6 +8,7 @@ import Slider from '../pages/logoSlider.js'
 import '../pages/index.css';
 import Text from '../components/TextContainer.js';
 import Home from '../pages/testHomePage.js';
+import MainRef from '../pages/mainRef.js';
 const items = [
   {
     src: require("assets/img/naturee.jpg"),
@@ -68,7 +68,7 @@ export default function Index() {
     <>
   
       {/* <IndexNavbar  /> */}
-      {/* <Example style={{height:'200px'}}/> */}
+      
       <Home></Home>
       <div className="content" style={{marginLeft:"30px",marginRight:"30px"}}>
       <section>
@@ -77,31 +77,6 @@ export default function Index() {
       </center>
       
         
-      {/* <Jumbotron style={{backgroundColor:'white'}}>
-       
-        <Container >
-        <center >
-          <img
-                    style={{ width: "200px", height: "200px" }}
-                    src="https://scontent.ftun4-1.fna.fbcdn.net/v/t1.15752-9/126426883_5004877019537638_7176445470275738431_n.png?_nc_cat=110&ccb=2&_nc_sid=ae9488&_nc_ohc=r4aGRoxfozYAX-M38l7&_nc_ht=scontent.ftun4-1.fna&oh=7ac6768b3218e99535d60bde9dc22df2&oe=5FDF17F4"
-                    alt="..."
-                  />
-
-</center>  
-          <p style={{color:'black',fontSize:'22px'}}>
-                Is a private engineering and consulting firm founded by a
-                    high qualified and experienced team. <br/>
-                    We are a Project and
-                    Business Development Company. <br/> 
-                    IRADA Consulting has a
-                    portfolio of services that encompasses expertise, surveying,
-                    advising, training and mentoring in the sectors of industry,
-                    agriculture and environment.<br/> We pride ourselves on providing
-                    concrete and customized solutions fully adapted to the
-                    specific needs of our clients.
-          </p>
-        </Container>
-      </Jumbotron> */}
    
       </section>
      
@@ -382,6 +357,7 @@ export default function Index() {
           </div>
       
       </div>
+     
       <div>
     <Footer fixed ></Footer>
     </div>

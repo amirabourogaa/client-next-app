@@ -25,8 +25,7 @@ export default function Home() {
         </div>
         <div class="header">
             <h1>Welcome to IRADA consulting</h1>
-            <p>For more information about our activities, projects or reffrences click below
-            <br/><button type="button">View Details</button>
+            <p >Thank you for visiting our Web site 
             </p>
             
         </div>

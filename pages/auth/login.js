@@ -68,36 +68,7 @@ export default function Login() {
                     <Link href="/services">
                       <button
                         className="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
-                        onClick={(e) => {
-
-                          let obj = {};
-                          obj.email = document.getElementById("email").value;
-                          obj.password = document.getElementById(
-                            "password"
-                          ).value;
-
-                          localStorage.setItem("email ", obj.email);
-                          axios
-                            .post(
-                              "https://server-cunsulting.herokuapp.com/Client/login",
-                              obj
-                            )
-                            .then(async (res) => {
-                              if (res.data !== undefined) {
-                                await cookie.set("token", res.data, {
-                                  expires: 2,
-                                });
-                              } else {
-                                localStorage.clear();
-                              }
-                            });
-                            Swal.fire(
-                              'Welcome !',
-                              'In IRADA Consulting','dear client'
-                              
-                            )
-
-                        }}
+                        
                       >
 
                         Sign In
@@ -133,7 +104,38 @@ export default function Login() {
       <input type="password" name="" required=""/>
       <label>Password</label>
     </div>
-    <a href="/services">
+    <a href="/services"
+    onClick={(e) => {
+
+      let obj = {};
+      obj.email = document.getElementById("email").value;
+      obj.password = document.getElementById(
+        "password"
+      ).value;
+
+      localStorage.setItem("email ", obj.email);
+      axios
+        .post(
+          "https://server-cunsulting.herokuapp.com/Client/login",
+          obj
+        )
+        .then(async (res) => {
+          if (res.data !== undefined) {
+            await cookie.set("token", res.data, {
+              expires: 2,
+            });
+          } else {
+            localStorage.clear();
+          }
+        });
+        Swal.fire(
+          'Welcome !',
+          'In IRADA Consulting','dear client'
+          
+        )
+
+    }}
+    >
       <span></span>
       <span></span>
       <span></span>

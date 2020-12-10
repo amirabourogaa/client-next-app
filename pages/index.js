@@ -5,8 +5,10 @@ import { Container, Row, Jumbotron } from "reactstrap";
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import Footer from "components/Footers/Footer.js";
 import Slider from '../pages/logoSlider.js'
-import Example from '../pages/Carousel'
-import '../pages/index.css'
+
+import '../pages/index.css';
+import Text from '../components/TextContainer.js';
+import Home from '../pages/testHomePage.js';
 const items = [
   {
     src: require("assets/img/naturee.jpg"),
@@ -65,14 +67,17 @@ export default function Index() {
   return (
     <>
   
-      <IndexNavbar  />
-      <Example style={{height:'200px'}}/>
+      {/* <IndexNavbar  /> */}
+      {/* <Example style={{height:'200px'}}/> */}
+      <Home></Home>
       <div className="content" style={{marginLeft:"30px",marginRight:"30px"}}>
       <section>
-    
+        <center style={{marginTop:'100px',marginBottom:'50px'}}>
+      <Text/>
+      </center>
       
         
-      <Jumbotron style={{backgroundColor:'white'}}>
+      {/* <Jumbotron style={{backgroundColor:'white'}}>
        
         <Container >
         <center >
@@ -96,13 +101,13 @@ export default function Index() {
                     specific needs of our clients.
           </p>
         </Container>
-      </Jumbotron>
+      </Jumbotron> */}
    
       </section>
      
       <section >
       
-        <h2 style={{color:'#1B019B',fontSize:30,marginBottom:'80px'}}  >
+        <h2 style={{color:'#00609e',fontSize:30,marginBottom:'80px'}}  >
           
           <i className="fas fa-chalkboard-teacher"></i>
           &nbsp; Team members
@@ -124,7 +129,7 @@ export default function Index() {
                       </div>
                     </div>
                     <div className="pt-8" style={{marginLeft: '20px'}}>
-                      <h5 className="text-xl font-bold" style={{color:'#1B019B'}}>Faycel IDOUDI</h5>
+                      <h5 className="text-xl font-bold" style={{color:'#00609e'}}>Faycel IDOUDI</h5>
                       <h6 className="text-xl font-normal  mt-0 mb-2 text-gray-800">
                         Petroleum Engineer Founder & Business Development
                         Manager
@@ -147,7 +152,7 @@ export default function Index() {
                       </div>
                     </div>
                     <div className="pt-8" style={{marginLeft: '20px'}}>
-                      <h5 className="text-xl font-bold" style={{color:'#1B019B'}}>Sonia CHEOUR</h5>
+                      <h5 className="text-xl font-bold" style={{color:'#00609e'}}>Sonia CHEOUR</h5>
                       <h6 className="text-xl font-normal  mt-0 mb-2 text-gray-800">
                         Master in Legal Science
                       </h6>
@@ -169,7 +174,7 @@ export default function Index() {
                       </div>
                     </div>
                     <div className="pt-8" style={{marginLeft: '20px'}}>
-                      <h5 className="text-xl font-bold" style={{color:'#1B019B'}}>Mohamed MAARREF</h5>
+                      <h5 className="text-xl font-bold" style={{color:'#00609e'}}>Mohamed MAARREF</h5>
                       <h6 className="text-xl font-normal  mt-0 mb-2 text-gray-800">
                         Georesources Engineer Manager
                       </h6>
@@ -195,7 +200,7 @@ export default function Index() {
                       </div>
                     </div>
                     <div className="pt-8" style={{marginLeft: '20px'}}>
-                      <h5 className="text-xl font-bold" style={{color:'#1B019B'}}>Dr Rabeh Alouini</h5>
+                      <h5 className="text-xl font-bold" style={{color:'#00609e'}}>Dr Rabeh Alouini</h5>
                       <h6 className="text-xl font-normal  mt-0 mb-2 text-gray-800">
                         Geology & Mines
                       </h6>
@@ -217,7 +222,7 @@ export default function Index() {
                       </div>
                     </div>
                     <div className="pt-8" style={{marginLeft: '20px'}}>
-                      <h5 className="text-xl font-bold" style={{color:'#1B019B'}}>Nadia IDOUDI</h5>
+                      <h5 className="text-xl font-bold" style={{color:'#00609e'}}>Nadia IDOUDI</h5>
                       <h6 className="text-xl font-normal  mt-0 mb-2 text-gray-800">
                         Financial Advisor
                       </h6>
@@ -240,7 +245,7 @@ export default function Index() {
                       </div>
                     </div>
                     <div className="pt-8" style={{marginLeft: '20px'}}>
-                      <h5 className="text-xl font-bold" style={{color:'#1B019B'}}>Yssine MESTIRI</h5>
+                      <h5 className="text-xl font-bold" style={{color:'#00609e'}}>Yssine MESTIRI</h5>
                       <h6 className="text-xl font-normal  mt-0 mb-2 text-gray-800">
                         Phd: Energy and Oil & Gas Expert
                       </h6>
@@ -258,7 +263,7 @@ export default function Index() {
           
           <div style={{marginTop:'100px'}}>
           
-              <h1  style={{color:'#1B019B',fontSize:30}}>
+              <h1  style={{color:'#00609e',fontSize:30}}>
               <i class="fas fa-users"></i> &nbsp; &nbsp;
                 Our Clients
               </h1>
@@ -294,51 +299,12 @@ export default function Index() {
         
         `}</style>
 
-        <div className="container px-4 mx-auto">
-          <div className="flex flex-wrap ">
-            <div className="w-full px-4   w-full px-4 flex-1">
-              <div className="flex flex-wrap">
-                <div className="w-full lg:w-4/12 px-4" id="marg">
-                  <Link href="/auth/login">
-                    <div className="hover:-mt-2 relative flex flex-col min-w-0 break-words  w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
-                      <br></br>
-                      <h5 className="text-xl font-semibold pb-4 text-center">
-                        Login Page
-                      </h5>
-                      <img
-                     
-                        alt="..."
-                        className="align-middle border-none  h-auto rounded-lg"
-                        src={require("assets/img/login.jpg")}
-                      />
-                    </div>
-                  </Link>
-                </div>
-
-                <div className="w-full lg:w-4/12 px-4" id="marg1">
-                  <Link href="/landing">
-                    <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words  w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
-                      <br></br>
-                      <h5 className="text-xl font-semibold pb-4 text-center">
-                        Contact us
-                      </h5>
-                      <img
-                        alt="..."
-                        className="align-middle border-none max-w-full h-auto rounded-lg"
-                        src={require("assets/img/landing1.jpg")}
-                      />
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        
        
       </section>
      
       <div style={{marginTop:'0px'}}>
-      <h1  style={{color:'#1B019B',fontSize:30}}>
+      <h1  style={{color:'#00609e',fontSize:30}}>
               <i class="fas fa-users"></i> &nbsp; &nbsp;
                 Our Partners
               </h1>

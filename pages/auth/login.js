@@ -4,11 +4,12 @@ import axios from "axios";
 // layout for page
 import cookie from "js-cookie";
 import Auth from "layouts/Auth.js";
+import '../auth/login.css';
 
 export default function Login() {
   return (
     <>
-      <div className="container mx-auto px-4 h-full">
+      {/* <div className="container mx-auto px-4 h-full">
         <div className="flex content-center items-center justify-center h-full">
           <div className="w-full lg:w-4/12 px-4">
             <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300 border-0">
@@ -119,7 +120,28 @@ export default function Login() {
             </div>
           </div>
         </div>
-      </div>
+
+      </div> */}
+      <div class="login-box">
+  <h1>Login</h1>
+  <form>
+    <div class="user-box">
+      <input type="text" name="" required=""/>
+      <label>Username</label>
+    </div>
+    <div class="user-box">
+      <input type="password" name="" required=""/>
+      <label>Password</label>
+    </div>
+    <a href="/services">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Submit
+    </a>
+  </form>
+</div>
     </>
   );
 }

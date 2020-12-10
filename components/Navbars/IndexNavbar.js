@@ -47,13 +47,13 @@ export default function Navbar(props) {
 
         <div className="collapse navbar-collapse" id="navbarColor02">
           <ul className="navbar-nav mr-auto">
-            <li className="nav-item active">
+            <li className="nav-item ">
               <a className="nav-link" href="/home">
                 Home
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href=" #partners">
+              <a className="nav-link" href=" /testHomePage">
                 Partners
               </a>
             </li>
